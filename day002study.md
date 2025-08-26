@@ -203,3 +203,26 @@ C:\Program Files\Java\jdk-11
     - import          ctrl + shift + o 
     - 정렬             ctrl + shift +  f
     - 한 줄 정렬        ctrl + alt + j
+
+
+4. java기본 용어 정리
+package com.company.java001; // 1. 부품의 위치
+
+// 슬러시 2개는 주석 (설명)
+public class A000 {
+	// 2. public 어디서든 접근이 가능하다.
+	// 3. class는 부품객체 
+	
+	public static void main(String []args) {
+		// 4. static은 메모리 상에 바로 올라가 있어서 바로 사용가능한 메모리
+		// void main(String []args)가 전원버튼의 이름
+
+        System.out.println("하이 민재");
+		// 5. 시스템의 아웃기능을 활용하여 출력받기
+        // ::  중요!! 대문자로 시작하는 A00, String []args, System.out은 부품객체!
+	}
+	
+	
+}// end class
+
+// ctrl + f11
