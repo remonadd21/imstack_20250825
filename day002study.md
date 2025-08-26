@@ -39,7 +39,7 @@ impaerior.gif                               bradforman.gif
 2) [git-로컬]  day002study.md 파일 올리기 (github)
 3) [github]  github에서 day002study.md 파일 수정
 4) [git-로컬]  day002study.md 파일 수정후 commit
-5) [git-로컬] git pull origin main   충돌발생
+5) [git-로컬] git pull origin main   "충돌발생"
 
 ---
 3. 트러블 슈팅
