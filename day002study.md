@@ -125,7 +125,7 @@ git branch -a로 로컬과 원격 브랜치 목록을 함께 확인해보는 것
     <title>web_basic001</title>
 </head>
 <body>
-    <h3>오랫만이다! </html></h3>
+    <h3>오랫만이다!</h3>
 </body>
 </html>
 
