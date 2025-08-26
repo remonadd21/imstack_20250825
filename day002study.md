@@ -1,3 +1,5 @@
+1. 정리하기
+
 [내 컴퓨터] - [github 클라우드]
 day002.md
 
@@ -28,3 +30,13 @@ impaerior.gif                               bradforman.gif
 2) git commit -m "프로필-impaerior"          7) git commit -m "프로필-brad"   
 3) git pull origin master                   8) git pull origin master  
 4) git push origin master                   9) git push origin master 
+
+---
+
+2. 작업하기
+
+1) [git-로컬]  day002study.md 파일 만들기
+2) [git-로컬]  day002study.md 파일 올리기 (github)
+3) [github]  github에서 day002study.md 파일 수정
+4) [git-로컬]  day002study.md 파일 수정후 commit
+5) [git-로컬] git pull origin main   충돌발생
