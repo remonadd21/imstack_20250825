@@ -1,5 +1,5 @@
 
-#### 1. 복습문제  주관식 & 빈칸채우기
+##### 1. 복습문제  주관식 & 빈칸채우기 #####
 
 https://hi-sally03915.tistory.com/1861.7x3
 
@@ -100,4 +100,4 @@ https://hi-sally03915.tistory.com/1861.7x3
 
 > 답) git config --list
 
-==== [ E N D ] ====
+>> ==== [ E N D ] ====
