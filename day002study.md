@@ -15,8 +15,6 @@ git push origin master
 ```
 ---
 
-> 최신 상황을 반영하여 업로드 하기
-
 [내 컴퓨터] - [github 클라우드] - [친구 컴퓨터]
 
 :: 내 파일을 내 친구가 자신의 컴퓨터에서 동일한 파일에 올리거나 수정할때
@@ -41,6 +39,13 @@ impaerior.gif                               bradforman.gif
 2) [git-로컬]  day002study.md 파일 올리기 (github)
 3) [github]  github에서 day002study.md 파일 수정
 4) [git-로컬]  day002study.md 파일 수정후 commit
+
+```bash
+
+git add .
+git commit -m "day002.md study 파일 수정"
+
+
 5) [git-로컬] git pull origin main   "충돌발생"
 
 ---
@@ -86,6 +91,6 @@ GitHub 저장소에 들어가서 Settings > Branches에서 기본 브랜치가 �
 
 필요하다면 원격 저장소의 브랜치 이름을 main으로 바꾸는 것도 가능해요. 혹시 로컬 브랜치와 원격 브랜치가 엇갈려 있다면, git branch -a로 로컬과 원격 브랜치 목록을 함께 확인해보는 것도 좋아요.
 
-원격 저장소 주소나 브랜치 구조를 조금 더 알려주시면, 더 정확하게 도와드릴 수 있어요! ☆
+원격 저장소 주소나 브랜치 구조를 조금 더 알려주시면, 더 정확하게 도와드릴 수 있어요!
 
 ```
