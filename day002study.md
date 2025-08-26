@@ -130,3 +130,26 @@ git branch -a로 로컬과 원격 브랜치 목록을 함께 확인해보는 것
 </html>
 
 ```
+
+---
+## Track003 - 자바설치
+
+1) java.sun.com
+2) https://www.oracle.com/java/technologies/?er=221886
+3) 설치 후( next, next , close ) , 주소줄 복사
+C:\Program Files\Java\jdk-11
+
+4) 내컴퓨터 - [속성] - 시스템 속성 - 고급 탭 - 환경변수 
+    또는 윈도우의 검색에서 환경변수 검색하기 > 시스템 속성 창의 하단의 환경변수 버튼 클릭
+
+
+   시스템 변수 (아래 창에서 "새로만들기 클릭 후" 아래 설정)
+   새로 만들기 ::         
+    변수 이름   JAVA_HOME   
+    변수 값     C:\Program Files\Java\jdk-11
+   
+   Path 찾아서 추가하기 ::    
+    오른쪽에서 새로 만들기 클릭하고 붙여넣기 : %JAVA_HOME%\bin   
+    가장 하단의 만들어진 값을 가장 위로 이동 시키기
+
+    확인, 확인으로 마무리 
