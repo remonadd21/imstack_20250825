@@ -146,6 +146,13 @@ git branch -a로 로컬과 원격 브랜치 목록을 함께 확인해보는 것
 ---
 ## Track003 - 자바설치
 
+0) java 란?
+    - 한 번 작성하면 어디서든 실행이 된다.
+    - JDK 설치 -> 작성 -> 컴파일 -> 실행
+    - JVM 운영체제의 다른 차이점을 처리하여  개발자는 프로그램 작성에만 집중 할 수 있도록 함
+    - 객체지향 언어
+
+
 1) java.sun.com
 2) https://www.oracle.com/java/technologies/?er=221886
 3) 설치 후( next, next , close ) , 주소줄 복사
@@ -165,3 +172,34 @@ C:\Program Files\Java\jdk-11
     가장 하단의 만들어진 값을 가장 위로 이동 시키기
 
     확인, 확인으로 마무리 
+
+5. java setting - ECLIPSE(1) 설치
+
+1) eclipse.org
+2) [download]  - Eclipse IDE for Java EE Developers
+
+3) 다운 받은 아이콘 2번 클릭
+    > 2번째 메뉴 선택
+    > 폴더 모양 아이콘 위에거는 그대로 두고, 
+    아래거는 해당 경로에 폴더 만들고 지정하기F:\imminjae\workspace\track003_java
+
+    > Launch 버튼 클릭 후, 경로에 F:\imminjae\workspace\track003_java 설정
+    > git 허브를 이용하여 올릴 수 있는 경로임
+    > git add . 은 모든 파일
+    > git add day002.md는 해당 파일만 선택
+
+
+6. java setting - ECLIPSE(2) 셋팅
+1) perspective : 개발에 융용한 view들 만 묶어놓은 작업창
+    window - perspective - open perspective - java 를 선택하여,  java 환경만들기
+
+2) utf-8  셋팅 (글꼴)
+    window - preferences - 검색 (enc) 의 utf8 (6개 항목 확인)
+
+
+3) 이클립스 단축키
+    - 명령어 불러오기   ctrl + space
+    - 주석             ctrl + shift + / (슬러시)    되돌리기는 (\ 백슬러시)
+    - import          ctrl + shift + o 
+    - 정렬             ctrl + shift +  f
+    - 한 줄 정렬        ctrl + alt + j
