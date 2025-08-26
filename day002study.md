@@ -1,4 +1,4 @@
-1. 정리하기
+## Track001 정리하기
 
 [내 컴퓨터] - [github 클라우드]
 day002.md
@@ -97,3 +97,36 @@ git branch -a로 로컬과 원격 브랜치 목록을 함께 확인해보는 것
 ```
 
 
+## Track002 - html + css + js / jQuery (WEB BASIC)
+
+1. 웹의 작업 순서
+    1) html은 구조를 작성함
+    2) css 꾸미기
+    3) js/jQuery/react는 동작을 담당함
+    4) jsp + oracle 서버전송 + 데이터 저장
+
+
+2. html 파일 템플릿
+
+    > 단축키 !(느낌표) + ENTER을 하면 기본 html 구조가 만들어진다.
+    > html  : 문서의 시작과 끝
+    > head  : 문서 정보
+    > body  : 사용자에게 보이는 내용
+    > 모든 언어는 소문자로 사용 권장! 
+    > 시작과 끝나는 태그 사용
+
+
+```
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web_basic001</title>
+</head>
+<body>
+    <h3>오랫만이다! </html></h3>
+</body>
+</html>
+
+```
