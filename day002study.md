@@ -188,15 +188,18 @@ C:\Program Files\Java\jdk-11
     > git add . 은 모든 파일
     > git add day002.md는 해당 파일만 선택
 
-
+---
 6. java setting - ECLIPSE(2) 셋팅
+
+---
 1) perspective : 개발에 융용한 view들 만 묶어놓은 작업창
     window - perspective - open perspective - java 를 선택하여,  java 환경만들기
 
+---
 2) utf-8  셋팅 (글꼴)
     window - preferences - 검색 (enc) 의 utf8 (6개 항목 확인)
 
-
+---
 3) 이클립스 단축키
     - 명령어 불러오기   ctrl + space
     - 주석             ctrl + shift + / (슬러시)    되돌리기는 (\ 백슬러시)
@@ -205,24 +208,35 @@ C:\Program Files\Java\jdk-11
     - 한 줄 정렬        ctrl + alt + j
 
 
-4. java기본 용어 정리
-package com.company.java001; // 1. 부품의 위치
+---
+4) java기본 용어 정리
+```
+package com.company.java001; 1. 부품의 위치
 
 // 슬러시 2개는 주석 (설명)
 public class A000 {
-	// 2. public 어디서든 접근이 가능하다.
-	// 3. class는 부품객체 
+	2. public 어디서든 접근이 가능하다.
+	3. class는 부품객체 
 	
 	public static void main(String []args) {
-		// 4. static은 메모리 상에 바로 올라가 있어서 바로 사용가능한 메모리
-		// void main(String []args)가 전원버튼의 이름
+		4. static은 메모리 상에 바로 올라가 있어서 바로 사용가능한 메모리
+		void main(String []args)가 전원버튼의 이름
 
         System.out.println("하이 민재");
-		// 5. 시스템의 아웃기능을 활용하여 출력받기
-        // ::  중요!! 대문자로 시작하는 A00, String []args, System.out은 부품객체!
+		5. 시스템의 아웃기능을 활용하여 출력받기
+        ::  중요!! 대문자로 시작하는 A00, String []args, System.out은 부품객체!
 	}
 	
 	
-}// end class
+}   end class
 
-// ctrl + f11
+    ctrl + f11
+```
+---
+7. 이클립스에서 문제풀어 보기
+
+Q)  패키지명 : com.company.java001_ex
+    클래스명 : A00_ex.java
+
+    "한 번 작성하면 어디서든 실행 된 다." 출력받기
+

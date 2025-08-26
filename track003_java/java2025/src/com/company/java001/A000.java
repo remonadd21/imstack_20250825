@@ -4,7 +4,6 @@ public class A000 {
 		System.out.println("하이 민재");
 	}
 	
-	
 }// end class
 
 // ctrl + f11
