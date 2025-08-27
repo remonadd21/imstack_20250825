@@ -75,7 +75,7 @@
 
 ## ✌️트러블 슈팅
 
-### 트러블슈팅 (1)
+### 트러블슈팅 (1)  : 2025.08.25(월)
 ```bash
 TJ-BU-703-P03@DESKTOP-5CVIKGS MINGW64 /c/KIMYOUNGMIN/workspace (master)
 $ git commit -m "git 수정 후 다시올리기"
@@ -93,7 +93,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ---
 <br/>
 
-### 트러블슈팅 (2)
+### 트러블슈팅 (2) : 2025.08.26(화)
 ```bash
 TJ-BU-703-강사PC@DESKTOP-2Q95R1R MINGW64 /d/hyojung/workspace (master)
 $ git pull  origin master 
@@ -116,7 +116,7 @@ CONFLICT 라는 충돌 현상이 발생하여, master의 개념에 대해 이해
 <br/>
 
 
-### 트러블슈팅 (3)
+### 트러블슈팅 (3) : 2025.08.26(화)
 ```bash
 TJ-BU-703-강사PC@DESKTOP-2Q95R1R MINGW64 /d/hyojung/workspace (master|MERGING) $ git pull origin master error: You have not concluded your merge (MERGE_HEAD exists). hint: Please, commit your changes before merging. fatal: Exiting because of unfinished merge.
 ```
@@ -127,6 +127,25 @@ pull로 자료를 불러와서
 확인해야 되는 이유도 정확하게 알았음.
 
 ---
+
+### 트러블슈팅 (4) : 2025.08.27(수)
+
+```bash
+GitHub에서 수정된 내용을 가져오지 pull로 불러오지 않아서
+push 되지 않았던 문제 발생 
+
+````
+
+#### 느낀점
+
+누군가가 작업한 문서나 파일이 있을지도 모르기 때문에 **반드시
+pull을 사용** 해야 한다는 것을 다시한번 이해했음!
+
+---
+
+
+
+
 
 <br/>
 <br/>
