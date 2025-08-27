@@ -17,7 +17,7 @@
 > git은 "로컬"에 저장되고, github는 "클라우드" 에서 협업한다.
 
 6. 클라우드와 내 최신 파일이 다를때 생기는 충돌
-> Confict (cntent)  : Merge conflict in 파일명
+> Conflict (cntent)  : Merge conflict in 파일명
 
 7. 충돌을 해결한 후 저장하는 방식은?
 > git add. -> git commit -m "충돌 해결"
