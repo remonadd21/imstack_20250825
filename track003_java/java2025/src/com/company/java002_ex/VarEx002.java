@@ -28,6 +28,13 @@ public class VarEx002 {
 		System.out.println(a+"*"+b+"="+(a*b));
 		System.out.println(a+"/"+b+"="+(a/b));
 		
+		
+		// printf
+		System.out.printf("%d+%d=%d\n",a,b,(a+b));
+		System.out.printf("%d-%d=%d\n",a,b,(a-b));
+		System.out.printf("%d*%d=%d\n",a,b,(a*b));
+		System.out.printf("%d/%d=%d\n",a,b,(a/b));
+		
 		// 예외문제)) (형 변환)실수 표현
 		double c = (double)a/(double)b;
 		System.out.printf("%d/%d=%f",a,b,c);
