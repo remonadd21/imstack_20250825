@@ -19,11 +19,12 @@
             <dt>2)글자크기</dt>
             <dd style="font-size:22px;">font-size:22px</dd>
             <dt>3)정렬</dt>
-            <dd style="text-align:right;">text-align:center / left / right / justify(수평정렬)</dd>
+            <dd style="text-align:justify; border:1px solid red; width:900px;">text-align은 글자들을 정렬할 때 사용하는 효과로, 속성으로는
+            center(가운데 정렬) / left (왼쪽으로 정렬) / right (오른쪽으로 정렬) / justify(수평정렬)이 있다.</dd>
             <dt>4)밑줄</dt>
             <dd>
                 text-decoration:none;
-                <a href="#" 
+                <a href="https://github.com/remonadd21/imstack_20250825" 
                     title="깃허브 주소" 
                     target="_blank" 
                     style="text-decoration:none;">
@@ -31,10 +32,32 @@
                 </a>
             </dd>
             <dt>5)글꼴</dt>
-            <dd>font-family:arial;</dd>
+            <dd style="background-color:beige; text-align:center; font-size:22px; 
+            font-family:'Times New Roman', Times, serif;">font-family:arial;</dd>
             <dt>6)굵기</dt>
-            <dd>font-weight:bold;</dd>
+            <dd style="font-weight:bold">font-weight:bold;</dd>
         </dl>
     </div><!--end div-->
+    <div>
+        <h3>배경 꾸미기</h3>
+        <p style="background-color:yellow;">background-color:yellow;</p>
+        <p style="background:pink;">background:pink;</p>
+        <p style="color:#fff; background:linear-gradient(to right,blue, yellow);">
+            background:linear-gradient(to right, pink, yellow);
+        </p>
+        <p style="background:#efefef url(./img0.png) no-repeat center / 20px 20px">
+            background:배경색상 url() 반복제어 / 배경 이미지 사이즈(가로, 세로); 
+            ◀배치 순서 바꾸지 말기
+        </p>
+    </div>
+    <div style="width:300px; border:3px solid red; border-radius:30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5); text-align:center;
+    padding:20px; margin:50px auto 0;">
+        <h3>박스 디자인</h3>
+        <p>가로 사이즈 : width:300px;</p>
+        <p>선   :   3px solid red</p>
+        <p>둥근 모서리 : border-radius:20px;</p>
+        <p style="text-align:justify; ">그림자 효과 : box-shadow : 0 4px 12px rgba(0,0,0,0.5);</p>
+    </div>
 </body>
 </html>
