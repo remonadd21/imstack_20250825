@@ -80,6 +80,8 @@
 : 출력결과 , 이름: 길동, 나이: 12
 
 ```
+com.company.java001; 
+
 public class A00t{
 
     public static void main(String [] args){
