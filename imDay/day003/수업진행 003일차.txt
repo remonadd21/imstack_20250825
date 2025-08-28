@@ -1,0 +1,31 @@
+3일차
+
+1.오전에 깃 복습문제
+2.마크다운 사용법
+3.깃허브에 마크다운 README.md 파일 올리기
+_____________________
+
+4. html 태그 공부 (div, p, img, a)
+5. java 출력 구문
+	
+	문제1
+	package : com.company.java001_ex
+	class	: A001_ex
+	출력내용 : hello World!
+
+6. java001 패키지에 A002 클래스 만들기
+	
+	문제2-1
+	package: com.company.java001_ex
+	class : A002_ex
+	
+	System.out.println("X");
+	System.out.println("XY");
+	System.out.println("XYZ");
+
+	위의 값을 출력문 하나에 위외 같이 세로로 나열하기
+
+
+	문제2-2
+	포맷형식 이용하여 문제풀기
+	도시: 인천,  인구: 10000000
