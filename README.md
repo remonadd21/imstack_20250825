@@ -191,7 +191,20 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 git pull.. origin master --rebase
 
---rebase란? 로벌변경사항을 원격변경사항으로 덮어주기
+--rebase란? 로벌변경사항을 원격변경사항 위에 덮어주기
+
+git diff 
+
+: git diff는 변경사항을 확인할 수 있음
+
+
+git status
+
+: 변경된 항목을 확인 할 수 있음
+
+q
+
+: q는 빠져나오기
 
 ---
 
