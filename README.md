@@ -169,7 +169,27 @@ pull을 사용** 해야 한다는 것을 다시한번 이해했음!
 
 ---
 
+### 트러블슈팅 (5) : 2025.08.29(금)
 
+```bash
+PS F:\imminjae\workspace> git push origin master
+To https://github.com/remonadd21/imstack_20250825.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/remonadd21/imstack_20250825.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+````
+
+#### 느낀점
+
+pull로 최신의 자료로 변환된 GitHub의 자료를 가져오지 않아서 생긴문제
+pull로 가져와서 수정 확인 후, 다시 업로드 하여 해결함
+
+---
 
 
 
