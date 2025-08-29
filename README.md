@@ -191,7 +191,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 git pull.. origin master --rebase
 
---rebase란? 로벌변경사항을 원격변경사항 위에 덮어주기
+--rebase란? 로벌변경사항을 원격변경사항에 직접 접근하여 덮어주기
 
 git diff 
 
