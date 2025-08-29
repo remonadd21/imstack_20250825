@@ -186,8 +186,12 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 #### 느낀점
 
-pull로 최신의 자료로 변환된 GitHub의 자료를 가져오지 않아서 생긴문제
-pull로 가져와서 수정 확인 후, 다시 업로드 하여 해결함
+1. 발생 문제 : 로컬 master와 원격 브랜치 (origin/master) 차이 발생
+2. 해결방안 :
+
+git pull.. origin master --rebase
+
+--rebase란? 로벌변경사항을 원격변경사항으로 덮어주기
 
 ---
 
