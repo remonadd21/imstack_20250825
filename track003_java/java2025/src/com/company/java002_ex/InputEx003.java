@@ -25,7 +25,8 @@ public class InputEx003 {
 		age = (nows-year)-1;
 		
 		//출력
-		System.out.println("나의 생년 월 일은 "+year+"년 "+month+"월 "+days+"일 이고, 나이는 "+age+"세 입니다.");
+		System.out.println("나의 생년 월 일은 "+year+"년 "+month+"월 "+days+"일 이고, "
+				+ "나이는 "+age+"세 입니다.");
 		
 	}
 }
