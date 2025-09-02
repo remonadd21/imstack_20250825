@@ -30,8 +30,8 @@
         dd{font-size:14px; color:#666; margin-bottom: 8px; padding-left:10px;}
 
         /* Q6. id1, id2 글자색상 :  각각 색상다르게, 글자굵기 : 굵게 */
-        #id1, #id2{background-color:#e6e6ff; font-weight: 700;}
-        #id2{background-color:#bcffe9;}
+        #id1, #id2{background-color:#fffae6; font-weight: 700;}
+        #id2{background-color:#ffe4f1;}
 
         /* Q7. .mycss 배경색상: #f9f1f7, 왼쪽 테두리 : 4px 실선 #e1306c, 안쪽여백 : 5px 10px, 테두리 둥글게 : 5px */
         .mycss{background-color:#f9f1f7; border-left:4px solid #e1306c;
@@ -40,19 +40,19 @@
     </style>
 </head>
 <body>
-    <div>
+    <div id="id1">
         <h3>id</h3>
         <p>유일한 값</p>
         <dl>
             <dt>id 특징</dt>
             <dd>html 문서에서 한번만 사용가능</dd>
-            <dd id="id1">중복불가</dd>
-            <dd id="id2">css에서 #id명으로 작성</dd>
+            <dd>중복불가</dd>
+            <dd>css에서 #id명으로 작성</dd>
             <dd>id="id1" , id="id1" 일 경우, 한 번만 사용가능해서 validator에서 오류남</dd>
             <dd>id와 class가 있을때 id의 우선순위가 높음</dd>
         </dl>
     </div><!-- end div -->
-    <div>
+    <div id="id2">
         <h3>class</h3>
         <p>여러 대상을 동시에 선택할 때 사용</p>
         <dl>
