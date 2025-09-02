@@ -36,7 +36,11 @@ public class InputEx2002 {
 		
 		//처리
 		total = kor+eng+math;
-		avg = total/3;
+		// 정수값으로 나누기가 되어 99.0 출력됨
+		// avg = total/3; 
+		
+		// 실수에 실수로 값을 계산하여 넣으면 소수점 표현이 가능함!
+		avg = total/3.0;
 		
 		
 		//출력
