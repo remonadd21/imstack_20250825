@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id vs class</title>
+    <style>
+        /* 전체 선택하고, 전체 여백빼기 */
+        * {margin:0; padding:0;}
+        
+        /* body  좋아하는 글꼴 적용 */
+        body {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: linear-gradient(135deg, #fdfdfd, #f9adff);}
+
+        /* Q1. h3 중앙정렬, 글자색상 :#31306c, 아래쪽 여백 : 10px; */
+        h3 {text-align: center; color:#31306c; margin-bottom:10px;}
+
+         
+        /* Q2. p 중앙정렬, 글자크기 : 14px, 글자색상 : #666, 아래쪽여백 : 20px */
+        p{text-align: center; font-size:14px; color: #666; margin-bottom: 20px;}
+
+        /* Q3. div 배경색상 : #fff, 너비 : 300px, 여백 : 위아래 30px 좌우 중앙정렬, 안쪽여백 : 20px, 테두리 둥글게 : 15px, 그림자효과, 왼쪽정렬 */
+        div{background-color:#fff; width:300px; margin:30px auto; padding:20px; border-radius:20px; 
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5); text-align:left;}
+
+        /* Q4. dt 글자굵기 : 굵게, 아래쪽여백 : 10px, 글자색상 : #333 */
+        dt{font-weight:bold; margin-bottom: 10px; color:#333;}
+
+        /* Q5. dd 글자크기 : 14px, 글자색상 : #666, 아래쪽여백 : 8px, 왼쪽 안쪽여백 : 10px */
+        dd{font-size:14px; color:#666; margin-bottom: 8px; padding-left:10px;}
+
+        /* Q6. id1, id2 글자색상 :  각각 색상다르게, 글자굵기 : 굵게 */
+        #id1, #id2{background-color:#e6e6ff; font-weight: bold;}
+        #id2{background-color:#bcffe9;}
+
+        /* Q7. .mycss 배경색상 : #f9f1f7, 왼쪽 테두리 : 4px 실선 #e1306c, 안쪽여백 : 5px 10px, 테두리 둥글게 : 5px */
+        .mycss{background-color:#f9f1f7; border-left:4px solid #e1306c;
+        padding:5px 10px; border-radius:5px;}
+
+    </style>
+</head>
+<body>
+    <div>
+        <h3>id</h3>
+        <p>유일한 값</p>
+        <dl>
+            <dt>id 특징</dt>
+            <dd>html 문서에서 한번만 사용가능</dd>
+            <dd id="id1">중복불가</dd>
+            <dd id="id2">css에서 #id명으로 작성</dd>
+            <dd>id="id1" , id="id1" 일 경우, 한 번만 사용가능해서 validator에서 오류남</dd>
+            <dd>id와 class가 있을때 id의 우선순위가 높음</dd>
+        </dl>
+    </div><!-- end div -->
+    <div>
+        <h3>class</h3>
+        <p>여러 대상을 동시에 선택할 때 사용</p>
+        <dl>
+            <dt>class의 특징</dt>
+            <dd class="mycss">같은 이름 재사용 가능 : 여러 요소에 class 지정</dd>
+            <dd>하나의 요소에 여러개의 class 사용가능</dd>
+            <dd class="mycss">css에서 .class명으로 호출이 가능</dd>
+            <dd>반복 스타일에 적합</dd>
+        </dl>
+    </div><!-- end div -->
+</body>
+</html>
