@@ -228,6 +228,7 @@ push 되지 않았던 문제 발생
 누군가가 작업한 문서나 파일이 있을지도 모르기 때문에 **반드시
 pull을 사용** 해야 한다는 것을 다시한번 이해했음!
 
+```
 ---
 
 ### 트러블슈팅 (5) : 2025.08.29(금)
@@ -266,6 +267,109 @@ git status
 q
 
 : q는 빠져나오기
+
+---
+
+### 트러블슈팅 (5) : 2025.08.29(금)
+
+```bash
+PS F:\imminjae\workspace> git push origin master
+To https://github.com/remonadd21/imstack_20250825.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/remonadd21/imstack_20250825.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+````
+
+#### 느낀점
+
+1. 발생 문제 : 로컬 master와 원격 브랜치 (origin/master) 차이 발생
+2. 해결방안 :
+
+git pull.. origin master --rebase
+
+--rebase란? 로벌변경사항을 원격변경사항에 직접 접근하여 덮어주기
+
+git diff 
+
+: git diff는 변경사항을 확인할 수 있음
+
+
+git status
+
+: 변경된 항목을 확인 할 수 있음
+
+q
+
+: q는 빠져나오기
+
+```
+
+---
+
+### 트러블슈팅 (5) : 2025.08.29(금)
+
+```bash
+PS F:\imminjae\workspace> git push origin master
+To https://github.com/remonadd21/imstack_20250825.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/remonadd21/imstack_20250825.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+````
+
+#### 느낀점
+
+1. 발생 문제 : 로컬 master와 원격 브랜치 (origin/master) 차이 발생
+2. 해결방안 :
+
+git pull.. origin master --rebase
+
+--rebase란? 로벌변경사항을 원격변경사항에 직접 접근하여 덮어주기
+
+git diff 
+
+: git diff는 변경사항을 확인할 수 있음
+
+
+git status
+
+: 변경된 항목을 확인 할 수 있음
+
+q
+
+: q는 빠져나오기
+
+```
+---
+
+### 트러블슈팅 (6) : 2025.09.03(수)
+
+상대방에게 Request 요청하기 문제, 내거에만 요청이되고, 상대방에게
+업로드 했거나 수정했다는 메세지를 남기지 못하는 문제 발생
+
+```
+```
+#### 느낀점
+
+##### 해결방안: 
+
+> 내 깃허브에서 상대방에게 올린 저장소 클릭
+> 사용한 브랜치 클릭
+> 업로드한 파일이나, 메시지 클릭
+> 왼쪽 상단의 pull Requests 메뉴 클릭
+> 오른쪽의 초록색 버튼 New Pull Request 버튼 클릭
+> 윗줄의 내가 사용한 브런치, 상대방에게 연결되어 있는 브런치 선택하기
+> 오른쪽의 View pull request  초록색 버튼 클릭 하기
+> 하단에서 코멘트 작성하기
 
 ---
 
