@@ -56,8 +56,8 @@ public class CastingEx002 {
 		System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
 		System.out.println(":: GOOD  IT SCORE ::");
 		System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-		System.out.println("국어   	영어     수학     총점     평균    			레벨 \n"
-						+ kor+"\t" + eng+"\t" + math+"\t" + total+"\t" +avg+"\t"+ level );
+		System.out.println("국어   	영어     수학     총점     평균    레벨 \n"
+						+ kor+"\t" + eng+"\t" + math+"\t" + total+"\t" +String.format("%.2f",avg)+"\t"+ level );
 		
 		
 			
