@@ -61,8 +61,11 @@ public class Operator001 {
 		System.out.print("숫자 하나 입력받기: ");
 		int num = scanner.nextInt();
 		
-		// 1. 입력받은 0보다 크면 양수, 그렇지 않다면 다시 0보다 작은지 확인
-		// 2. 거짓부분에서 0보다 작은지 확인하고, 참과 거짓 표현하기
-		System.out.println( num>0 ? "양수": num<0? "거짓":0);
+		// String res = num>0 ? "양수":"음수"
+		
+		// 거짓 자리에서 다시 수식 표현이 가능함
+		// String res = num>0 ? "양수": num<0? "참":"거짓"
+		String res = num >0 ? "양수":num<0? "음수":"0";
+		System.out.println("결과 값: "+res);
 	}
 }
