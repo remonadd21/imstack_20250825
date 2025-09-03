@@ -129,6 +129,8 @@
 ```
 1. html css 내부적용 복습 문제
   > track002_web_basic / web005_jack.html에 문제 풀기
+2. web005ex.html 만들어서 문제풀기
+
 
 ```
 ---
