@@ -68,7 +68,7 @@ public class CastingEx002_1 {
 		minit = minit/10;
 		
 		// 1시간당 2점
-		sleeps = (sleeps/1)+1;
+		sleeps = sleeps*2;
 		
 		// 총점
 		total = walk + minit + sleeps;
