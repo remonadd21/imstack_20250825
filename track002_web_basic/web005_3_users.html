@@ -60,9 +60,11 @@
     .card dt { font-weight: bold; }
     .card dd { margin-bottom:10px; }
 
-    .card .add{position:absolute; left:0; top:0; font-size:12px; 
+    .card .add{position:absolute; right:0; top:0; font-size:14px; 
       background-color:rgb(255, 61, 61); color:#fff; padding:0 20px;
-    border-radius: 20px 0 0 0;}
+    border-radius: 0 20px; transition: all .3s ease .2s;}
+
+    .card .add:hover{background-color:rgb(139, 0, 0); border-bottom:5px solid #fe0000;}
 
     .clear{clear: both; background-color:#37495F;
     width:1280px; margin-left:20px; padding:10px;
