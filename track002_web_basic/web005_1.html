@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Q1 전체 여백빼기 */
+        /* box-sizing은 padding 값으로 영역이 커진 값들이 크기를 유지하도록 만듬*/
+        /* box-sizing은 padding과 boder값 까지 포함해서 계산
+            박스크기가 100px, padding:10px; 자동으로 크기 조절하여 100px이 유지됨*/
+        *{margin:0; padding:0; box-sizing: border-box;}
+
+        /* Q2 body 글꼴, 전체 배경색상 */
+        body{background-color:#efefef; 
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+        /* Q3 h3 왼쪽에서 선넣기, 배경색상 */
+        h3{border-left:10px solid red;
+            border-bottom:2px solid #333;
+            background-color:#ff0;
+            margin:20px 0;}
+
+        /* Q4 strong 배경색*/
+        /* 인라인은 margin 위아래 적용이 어려워서 줄바꿈 불가*/
+        /* 인라인 컨텐츠는 너비값 적용도 어려움 */
+        strong{background-color:aquamarine; padding:5px; margin:20px;
+        width:200px;}
+
+        /* Q5 box 예)*/
+        .container{width:60%; margin:30px auto; background-color:aqua;
+        padding:50px; border-radius:20px; box-shadow:5px 10px 50px rgba(0,0,0,0.2);}
+        
+        .item{ padding:10px; background-color:brown; color:#fff;}
+
+        /* Q6 float */
+        /* padding 값으로 인해 너비가 120px 이어야 하지만, 전체에 box-sizing이 있기때문에
+        너비 100px에 영향을 받지 않음*/
+        .i1{width:100px; float:left;}
+        .i2{width:100px; float:right;}
+        .i3{clear:both;}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>1. block vs inline</h3>
+        <p><strong>block</strong> 그릇 width/height 0, 줄바꿈 0</p>
+        <p><strong>inline</strong> 콘텐츠-간장 width/height X, 줄바꿈 X</p>
+    </div>
+    <div class="container f1">
+        <h3>배치 - float</h3>
+        <p class="item i1">left</p>
+        <p class="item i2">right</p>
+        <p class="item i3">float:left, float:right 사용시, 왼쪽, 오른쪽 배치 / clear:both</p>
+    </div>
+</body>
+</html>
