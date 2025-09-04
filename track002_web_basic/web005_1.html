@@ -40,6 +40,17 @@
         .i2{width:100px; float:right;}
         .i3{clear:both;}
 
+        /* Q7 position */
+        /* position이 없으면 left, top, right, bottom 기능 적용 안됨 */
+        /* 무엇을 중심으로 움직이지 알수 없기 때문임*/
+        /* position:relative는 자신이 있던 위치에서 부터 움직임*/
+        .me{background-color:rgb(0, 123, 20); padding:10px; color:#fff;
+        }
+
+        .p1{position:relative;} /* relative로 감싸는 부모에 공간확보*/
+        .p1 .me{right:0; bottom:0; position:absolute;} /* 자식요소 absolute*/
+
+        .p2 .me{ position:fixed; bottom:100px; right:0; background-color:rgb(156, 5, 141);}
     </style>
 </head>
 <body>
@@ -54,5 +65,15 @@
         <p class="item i2">right</p>
         <p class="item i3">float:left, float:right 사용시, 왼쪽, 오른쪽 배치 / clear:both</p>
     </div>
+    <div class="container p1">
+        <h3>배치 - position - relative + absolute</h3>
+        <p class="me">where i am?</p>
+        <p>부모: relative (공간확보) / 자식요소 absolute (기본적으로 브라우저 따라감)</p>
+    </div>
+    <div class="container p2">
+        <h3>배치 - position - fixed</h3>
+        <p class="me">where i am?</p>
+    </div>
+
 </body>
 </html>
