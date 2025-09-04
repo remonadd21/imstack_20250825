@@ -23,8 +23,11 @@ public static void main(String[] args) {
 		System.out.print("알파벳 하나 입력받기: ");
 		ch = scanner.next().charAt(0);
 		//처리
-		//출력
-		if(ch>='a' && ch<='z') {System.out.println("소문자 "+ch+" 입니다.");}
+		//출력 
+		// 1. 직접 소문자나 대문자 범위 설정 ch>='a' && ch<='z' 가능함
+		// 2. 숫자로도 표현이 가능함, 소문자 범위 97 ~ 122
+		
+		if(ch>=97 && ch<=122) {System.out.println("소문자 "+ch+" 입니다.");}
 		else if( ch>='A' && ch<='Z') { System.out.println("대문자 "+ch+" 입니다.");}
 		else {System.out.println("범위 안의 알파벳을 하나만 입력하세요.");}
 	
