@@ -57,6 +57,7 @@ public class Operator001 {
 		System.out.println( a==10? "10이다" :"10이 아니다.");
 		
 		// Q3 숫자를 입력받아 0보다 크다면 양수, 0보다 작으면 음수, 아니라면 0
+		/*
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("숫자 하나 입력받기: ");
 		int num = scanner.nextInt();
@@ -67,5 +68,44 @@ public class Operator001 {
 		// String res = num>0 ? "양수": num<0? "참":"거짓"
 		String res = num >0 ? "양수":num<0? "음수":"0";
 		System.out.println("결과 값: "+res);
+		*/
+		
+		// 5.대입 연산자
+		a=10;  b=3;
+		System.out.println("a=a+b : "+(a+=b) );
+		System.out.println("a=a-b : "+(a-=b) );
+		System.out.println("a=a*b : "+(a*=b) );
+	
+		
+		// 6.단항
+		int a1=1, b1=1, c1=1, d1=1;
+		
+		System.out.println(++a1); // 증가하고 출력
+		System.out.println(a1);
+		System.out.println(b1++); // 출력하고 증가
+		System.out.println(b1);
+		System.out.println(--c1); // 감소하고 출력
+		System.out.println(c1);
+		System.out.println(d1--); // 출력하고 감소
+		System.out.println(d1);
+		
+		
+		/*
+		 * 연습문제1)
+			클래스명 : OperatorEx001
+			    int a=3, b=10;
+			    System.out.println(  b+=10 - a-- );   
+			    System.out.println(  a+=5 );
+			    System.out.println(  a>=10 || a<0 && a>3);
+			
+			연습문제2)  다음에 해당하는 클래스의 조건을 출력하시오.
+			클래스명 : OperatorEx002
+			q1-1 int형 변수 x가 3보다 크고 10보다 작을때 true인 조건식 
+			q1-2 char형 변수 ch가 'a' 또는 'A'일때   true인 조건식    
+			q1-3 char형 변수 ch가 숫자('0'~'9')일때   true인 조건식     
+			q1-4 char형 변수 ch가 영문자(대문자 또는 소문자) 일때   true인 조건식
+
+		 * 
+		 * */
 	}
 }
