@@ -151,6 +151,36 @@
 1. float, position, display, flex 배치기술
 2. 실습문제 2개 풀기
 3. 실습문제 더보기 버튼 추가하기
+4. 자바 복습문제
+  
+  > 복습문제1
+  1. 자바의 자료형은 ( 기본형(값) / 참조형(주소) )
+  2. 자바 기본형의 분류는 - boolean - (정수형) - (실수형)
+  3. 정수형의 종류는 (byte, short, int, long)
+  4. 실수형의 종류는 (float, double)
+
+  > 복습문제2  다음코드에는 문제가 있다. 이유를 적고 해결하시오.
+  short  sh1 =1;
+  short  sh2 =2;
+  short result = sh1+sh2;
+
+  > sh1와  sh2가 계산될때 1과 2가 int (4byte)로 변환되어 들어온다.
+  담을수 있는 result부분이 2byte로 공간이 작기 때문에 담을수 없다.
+
+  > 해결 방법 sh1+sh2를 (short)(sh1+sh2) 로 형변환한다.
+  > 해경 방법 int result로 변환하여 담는 변수를 큰 공간으로 만든다.
+
+  > 복습문제3 eclipse
+  com.company.java003_ex
+  Repeat009
+
+  Scanner로 입력받아서 나누기 프로그램 만들기
+    숫자1 입력   10
+    숫자2 입력   3
+
+    10/3 = 3.33 으로 소수점 2째자리 까지 표현
+
+
 ```
 
 ---
