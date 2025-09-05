@@ -19,14 +19,22 @@ public class IfEx005 {
 		ch = scanner.next().charAt(0);
 		System.out.println("입력받은 문자: "+ch);
 		
-		//처리
+		//처리 if문 방법
+		/*
 		if(ch>='a' && ch<='z') { ch-=32;}
 		else if(ch>='A' && ch<='Z') {ch+=32;}
 		else {System.out.println("알파벳 하나만 입력하세요.");}
-		
+		*/
 		//출력
-		System.out.println("바뀐 문자: "+ch);
-
+		// System.out.println("바뀐 문자: "+ch);
+		
+		
+		// 삼항연산자
+		String res = (ch>='a' && ch<='z')?""+(ch-=32):
+			(ch>='A' && ch<='Z')?""+(ch+=32):"알파벳을 하나만 입력하세요";
+		
+		System.out.println("변환된 문자: "+res);
+		
 		
 	}
 }

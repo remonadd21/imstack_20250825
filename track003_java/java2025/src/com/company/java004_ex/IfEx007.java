@@ -32,7 +32,9 @@ public class IfEx007 {
 		num2 = scanner.nextInt();
 		
 		// 처리
-		// 출력
+		
+		// 출력 if문 방법
+		/*
 		if(oper=='+') {
 			System.out.println(num1+"+"+num2+"="+(num1+num2));}
 		else if(oper=='-') {
@@ -43,10 +45,26 @@ public class IfEx007 {
 			avg = num1 / (double)num2;
 			String resavg = String.format("%.2f", avg);
 			System.out.println(num1+"/"+num2+"="+resavg);
-		}
+		}*/
 		
+		//처리2 (소수점 자리수 표현)
+		avg = num1 / (double)num2;
+		String resavg = String.format("%.2f", avg);
 		
+		//출력: 3항 연산자 ver-1
+		/*
+		String operRes = (oper=='+')?""+(num1+num2):(oper=='-')?""+(num1-num2):
+			(oper=='*')?""+(num1*num2):(oper=='/')?""+resavg:"다시 확인해 주세요";
+		*/
 		
+		String operRes = ""+num1+oper+num2+"="; 
+		
+		operRes += oper=='+'? num1+num2:
+						  oper=='-'? num1-num2:
+						  oper=='*'? num1*num2:
+						  oper=='/'? String.format("%.2f",(double)num1/num2):"";
+		
+		System.out.println(operRes);
 
 		
 		

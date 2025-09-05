@@ -18,11 +18,16 @@ public class IfEx006 {
 		System.out.print("짝수나 홀수 입력받기: ");
 		num = sc.nextInt();
 		//처리
-		//출력
+		//출력 if문으로 문제 출력
+		/*
 		if(num%2!=0) {System.out.println("남자 입니다.");}
 		else if(num%2==0) {System.out.println("여자 입니다.");}
 		else {System.out.println("짝수나 홀수를 입력하세요.");}
+		*/
 		
+		// 삼항연산자
+		String res = (num%2==0)?"여자입니다.":(num%2!=0)?"남자입니다":"다시확인해주세요";
+		System.out.println(res);
 		
 	}
 }

@@ -54,34 +54,54 @@ public class IFEx008 {
 		
 		// pass
 		// 평균이 60점이상이고  각과목이 40점 미만이면 아니라면 합격/ 아니면 불합격
+		/* if문 출력 방식
 		if(avg>=60 && kor>40 && eng >40 && math>40) {
 			pass="합격";
 		}
 		else {pass="불합격";}
+		*/
 		
+		// pass 삼항연산자 ver1
+		// pass = (avg>=60 && kor>40 && eng >40 && math>40)?"합격":"불합격";
+		
+		// ver2, 불합격을 먼저 확인하고, 합격을 봐도 좋을거 같음
+		pass = avg<60?"불합격":kor>40 && eng >40 && math>40?"합격":"";
+	
 		// elite
 		// 평균이 95점이상이면 장학생
+		// if문 방식
+		/*
 		if(avg>=95) {elite="장학생";}
 		else {elite="일반";}
+		*/
+		
+		// elite  삼항연산자
+		elite = (avg>=95)?"장학생":"일반";
 		
 		// level
 		// 평균이  90점이상이면 수, 80점이상이면 우, 70점이상이면 미, 60점이상이면 양, 아니라면 가 
+		/* if문으로 문제풀기
 		if(avg>=90) {level="수";}
 		else if(avg>=80) {level="우";}
 		else if(avg>=70) {level="미";}
 		else if(avg>=60) {level="양";}
 		else {level="가";}
+		*/
 		
+		// level 3항 연산자
+		level = (avg>=90)?"수":(avg>=80)?"우":(avg>=70)?"미":(avg>=60)?"양":"가";
 		
 		// 평균 소수점 처리
-		String resAvg = String.format("%.2f", avg);
+		//String resAvg = String.format("%.2f", avg);
 		
 		
 		//출력
 		System.out.println("===================================================================================");
-		System.out.println("학번   	국어    영어   수학   	총점   평균    합격여부   레벨   장학생");
+		System.out.printf("%-5s\t%-5s\t%-5s\t%-5s\t%-5s\t%-5s\t%-5s\t%-5s\t%-5s\n"
+				,"학번","국어","영어","수학","총점","평균","합격여부","레벨","장학생");
 		System.out.println("===================================================================================");
-		System.out.println(hak+"\t"+kor+"\t"+eng+"\t"+math+"\t"+total+"\t"+resAvg+"\t"+pass+"\t"+level+"\t"+elite);
+		System.out.printf("%-5s\t%-5d\t%-5d\t%-5d\t%-5d\t%.2f\t%-5s\t%-5s\t%-5s\n"
+				,hak,kor,+eng,math,total,avg,pass,level,elite);
 				
 		
 	}
