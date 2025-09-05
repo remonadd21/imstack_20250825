@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <title>나의 포트폴리오</title>
   <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
 /* Q1: 페이지 전체에 배경 그라디언트를 적용하고 기본 글꼴과 안쪽 여백을 주려면?
    - 배경: 135도 방향의 그라디언트 (#f0f9ff → #e0f7fa)
    - 글꼴: Arial
    - 안쪽 여백: 30px */
 body {
   font-family: 'Arial';
-  background: linear-gradient(135deg, #f0f9ff, #e0f7fa);
+  background-image: linear-gradient(135deg, #f0f9ff, #e0f7fa);
   padding: 30px;
 }
 
@@ -28,7 +30,7 @@ h1 {
    - 너비: 50%
    - 좌우 자동 마진으로 가운데 정렬 */
 .container {
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 
@@ -59,13 +61,23 @@ h1 {
   background-clip: padding-box;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.8s ease forwards;
+  animation: fadeInUp 0.8s ease forwards;/* forward : 애니메이션 마지막 상태 유지*/
 }
 
-/* Q5: 두 번째 카드에 애니메이션 지연을 주려면?
+
+/* Q5: 1, 2, 3카드에 애니메이션 지연을 주려면?
    - 지연 시간: 0.3초 */
-.card:nth-child(2) {
+
+.card:nth-child(3) {
   animation-delay: 0.3s;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.9s;
 }
 
 /* Q6: 카드에 마우스를 올렸을 때 효과를 주려면?
@@ -148,7 +160,7 @@ h1 {
   border-radius: 12px;
   font-size: 13px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /* Q12: 버튼에 마우스를 올렸을 때 색상 변경과 흔들림 효과를 주려면?
@@ -166,7 +178,7 @@ h1 {
   25% { transform: translate(2px, 2px); }
   50% { transform: translate(-2px, -2px); }
   75% { transform: translate(2px, -2px); }
-  100% { transform: translate(0, 0); }
+  100% { transform: translate(0, 0);}
 }
 
 /* Q14: 카드가 아래에서 위로 부드럽게 등장하도록 애니메이션을 정의하려면?
@@ -216,6 +228,14 @@ h1 {
       <img src="./img/portfolio2.jpg" alt="프로젝트2 썸네일">
       <h2>AI 챗봇 서비스</h2>
       <p>Python 기반의 자연어 처리 챗봇 시스템</p>
+      <p>사용 기술: Flask, TensorFlow, NLP</p>
+      <a href="https://github.com/mychatbot" class="more-btn" target="_blank">더보기</a>
+    </div>
+
+    <div class="card">
+      <img src="./img/portfolio3.jpg" alt="프로젝트3 썸네일">
+      <h2>반응형</h2>
+      <p>반응형 작업을 위한 시스템, 모바일 기기와 호환성 좋음</p>
       <p>사용 기술: Flask, TensorFlow, NLP</p>
       <a href="https://github.com/mychatbot" class="more-btn" target="_blank">더보기</a>
     </div>
