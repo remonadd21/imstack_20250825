@@ -17,8 +17,9 @@ public class forEx004 {
 		
 		System.out.println("3의 배수, (3, 6, 9) 3개 출력");
 		
-		for(int i=3; i<10; i=i+3)
-			System.out.print(i+" , ");
+		for(int i=1; i<10; i++)
+			if(i%3==0) { System.out.print((i==3?"":",")+i);}
+
 		}
 		
 		/*

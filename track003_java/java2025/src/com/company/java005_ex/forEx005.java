@@ -14,10 +14,18 @@ public class forEx005 {
 			System.out.print(i +" , ");
 		}
 		
-		System.out.println("/n업그레이드, a, e, i, o, u");
+		System.out.println("\n업그레이드, a, e, i, o, u");
 		for(char i='a'; i<='z'; i++) {
 			System.out.print((i=='a')?'a':(i=='e')?'e':(i=='i')?'i':
 				(i=='o')?'o':(i=='u')?'u':"");
+		}
+		
+		System.out.println("\n\nswitch 버전으로 문제풀기");
+		for(char i='a'; i<='z'; i++) {
+			switch(i) {
+			case 'a': case 'e': case 'i': case 'o': case 'u': 
+				System.out.print((i=='a'?"":",")+i); break;
+			}
 		}
 	}
 }
