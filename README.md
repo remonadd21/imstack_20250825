@@ -199,7 +199,8 @@
 ```
 1. java 제어문 switch
 2. java for문
-3. html display
+3. html display (속성 설명)
+4. html display , float, position 비교 설명
 
 ```
 
