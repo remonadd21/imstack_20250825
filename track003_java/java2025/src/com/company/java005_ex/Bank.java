@@ -7,7 +7,8 @@ public class Bank {
 		
 			
 		//변수
-		int num=0, money=0, age=0;
+		int num=0, age=0;
+		double money=0;
 		char end9 ='\u0000';
 		String ids="",ids2="", pws="",pws2="",chk="";
 		
@@ -105,7 +106,7 @@ public class Bank {
 						System.out.println("메뉴로 돌아갑니다.");
 						break;
 					}
-					if(chk.equals("y") || chk.equals("Y") ) {
+					else if(chk.equals("y") || chk.equals("Y") ) {
 						System.out.println("계좌를 삭제합니다.");
 						ids=""; pws=""; ids2=""; pws2=""; money=0;
 						System.out.println("계좌가 삭제되었습니다.");
