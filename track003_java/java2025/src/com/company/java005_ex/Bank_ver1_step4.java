@@ -103,9 +103,17 @@ public class Bank_ver1_step4 {
 				if(tempid.equals(ids) && temppass.equals(pws)) {
 					System.out.println("정보가 일치합니다.");
 					System.out.print("출금 금액을 입력하세요: ");
-					money-=scanner.nextInt();
 					
-					System.out.println("고객님의 잔액은 "+money+"원 입니다.");
+					double tempmoney=scanner.nextInt();
+					
+					if(tempmoney > money) {System.out.println("잔액이 "+money+"원 으로 출금이 불가능 합니다.");}
+					else {	
+					money = money-tempmoney;
+					System.out.println("출금완료");
+					System.out.println("고객님의 잔액은 "+money+"원 입니다.\n");
+					}
+					
+					
 				}
 				else {
 					System.out.println("정보가 일치하지 않습니다.");

@@ -81,10 +81,17 @@ public class Bank {
 				
 				if(ids.equals(ids2) && pws.equals(pws2)) {
 					System.out.print("출금할 금액을 입력하세요: ");
-					money-= scanner.nextInt();
 					
+					
+					// 마이너스 금액 남지 않도록 만듬
+					double tempmoney = scanner.nextInt();
+					
+					if(tempmoney > money) {System.out.println("잔액이 "+money+"원 으로 출금이 불가능 합니다.");}
+					else {
+					money = money-tempmoney;
 					System.out.println("출금완료");
-					System.out.print("잔액: "+money+"원\n");
+					System.out.print("잔액: "+money+"원\n");}
+		
 				}
 				else {System.out.println("> 다시 확인해 주세요.");}
 			}// if end 4
