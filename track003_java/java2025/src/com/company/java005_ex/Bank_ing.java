@@ -7,10 +7,10 @@ public class Bank_ing {
 		
 			
 		//변수
-		int num=0, age=0;
+		int num=0, age=0, count=0;
 		double money=0;
 		char end9 ='\u0000';
-		String ids="",ids2="", pws="",pws2="",chk="", res="";
+		String ids="", pws="",chk="", res="";
 		
 		//입력
 		Scanner scanner = new Scanner(System.in);
@@ -18,8 +18,8 @@ public class Bank_ing {
 			
 		// 처리 : 반복메뉴
 		for(;;) {
-			
-			System.out.println("\n(1)추가 / (2)조회 / (3)입금 / (4)출금 / (5)삭제 / (9)종료\n");
+			System.out.println("\n💳 Welcome to Bank_ing 💳\n ===========================");
+			System.out.println("(1) 계좌 추가\n(2) 내 정보 조회\n(3) 입금하기\n(4) 출금하기\n(5) 계좌 삭제\n(9) 종료하기\n===========================");
 			System.out.print("서비스 번호를 눌러 주세요: ");
 			num = scanner.nextInt();
 			
@@ -33,25 +33,42 @@ public class Bank_ing {
 				System.out.print("비밀번호 입력: ");
 				pws = scanner.next();
 				
-				System.out.print("나이입력: ");
+				do {
+				System.out.print("나이입력 (19~100세): ");
 				age = scanner.nextInt();
+				}while(!(age>=19 && age<=100));
 				
 				System.out.print("잔액입력: ");
 				money = scanner.nextInt();
 			}// if end 1
 		
 			else if(num==2 || num==3 || num==4 || num==5) {
+				
+				int num2 = 0;
+				
+				
 				System.out.print("아이디 입력: ");
-				ids2 = scanner.next();
+				String ids2 = scanner.next();
 				
 				System.out.print("비밀번호 입력: ");
-				pws2 = scanner.next();
-				
-				if(ids2.equals(ids) && pws2.equals(pws)) {num=num;}
-				else {System.out.println("다시 확인해 주세요."); continue;}
+				String pws2 = scanner.next();
+			
 				
 				
-				switch(num) {
+				if(ids2.equals(ids) && pws2.equals(pws)) {num2=num;}
+				else {
+					count++;
+					System.out.println("고객님 "+count+"번 틀리셨습니다.");
+					if(count==3) {
+						System.out.println("\n고객센터에 문의하세요.\n1234-8900");
+						break;
+					}
+				}
+				
+		
+				
+				
+				switch(num2) {
 					case 2: res+="아이디:"+ids+"/나이:"+age+"/잔액:"+money+"원"; 
 						System.out.println(res); break;
 					

@@ -220,6 +220,15 @@
 2. java if, switch, 무한반복 실습문제
 ```
 
+## 👩‍🎓 Study Day13
+
+```
+1. java while, do while, for
+2. bank 문제
+3. html 문제
+4. display:flex
+```
+
 
 
 ## 💖포트폴리오

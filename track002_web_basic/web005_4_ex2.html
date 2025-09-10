@@ -14,7 +14,27 @@ body {
   font-family: 'Arial';
   background-image: linear-gradient(135deg, #f0f9ff, #e0f7fa);
   padding: 30px;
+  /*animation:aquas 20s ease;*/
+  position:relative;
+  overflow:hidden;
 }
+li{list-style:none;}
+
+.aquas{width:20px; height:20px; border-radius:10px; background-color:rgb(172, 158, 63); position:absolute;
+  left:0;  text-indent:-9999px; font-size:1px; 
+  animation:a1 10s ease alternate infinite;
+}
+
+.a1{bottom:-300px; left:200px; }
+.a2{bottom:-450px; left:400px; background-color:rgb(34, 114, 194);}
+.a3{bottom:-240px; left:600px; background-color:rgb(88, 203, 132);}
+.a4{bottom:-420px; left:1000px; background-color:rgb(182, 80, 169);}
+.a5{bottom:-380px; left:1300px; background-color:rgb(102, 160, 196);}
+
+@keyframes a1{ 100%{bottom:20px; opacity:0; transform:rotatey(360deg);}}
+
+
+
 
 /* Q2: 제목(h1)을 가운데 정렬하고 색상과 아래 여백을 주려면?
    - 정렬: 가운데
@@ -23,16 +43,27 @@ body {
 h1 {
   text-align: center;
   color: #00796b;
-  margin-bottom: 40px;
+  margin:auto;
+  width:100%;
 }
 
 /* Q3: 콘텐츠 박스를 가운데 배치하고 너비를 50%로 설정하려면?
    - 너비: 50%
    - 좌우 자동 마진으로 가운데 정렬 */
-.container {
-  width: 60%;
-  margin: auto;
-}
+
+/* Q16: 콘텐츠 박스를 가운데 배치하고 너비를 80%로 설정하려면?
+   - 너비: 80%
+   - 좌우 자동 마진으로 가운데 정렬  
+   - display:flex를 이용해서 카드들을 가로로 나열하고 
+   - 가운데 정렬
+*/
+
+.container{width:80%; margin:auto;  display:flex; 
+  justify-content:center; /*space-between; 좌우 끝에 배치*/ 
+  flex-wrap: wrap; /*넘치는 컨텐츠가 있다면 줄바꿈 허용 (한줄로 안만들어지면 다음줄 사용)*/
+  gap:20px;/*카드 사이 간격*/}
+
+
 
 /* Q4: 카드 박스를 가로로 배치하고 시각적 스타일을 주려면?
    - float: left (가로 정렬)
@@ -47,7 +78,7 @@ h1 {
    - 애니메이션: 등장 시 아래에서 위로 이동 (translateY)
    - 테두리: 투명 3px, 배경 클립 설정 */
 .card {
-  float: left;
+  /*float: left;*/
   width: 250px;
   margin: 20px;
   padding: 20px;
@@ -199,8 +230,9 @@ h1 {
    - 둥근 모서리: 10px
    - 텍스트 가운데 정렬, 글자색: #333 */
 .clear {
-  clear: both;
-  margin-top: 50px;
+  /*clear: both;*/
+  width:100%;
+  /*margin-top: 50px;*/
   padding: 15px;
   background: #e0f2f1;
   border-radius: 10px;
@@ -208,6 +240,8 @@ h1 {
   font-size: 15px;
   color: #333;
 }
+
+
 
 
   </style>
@@ -243,6 +277,15 @@ h1 {
     <div class="clear">
       이 포트폴리오는 실제 프로젝트를 기반으로 구성되었으며, 각 프로젝트는 GitHub에서 확인할 수 있습니다.
     </div>
+  </div>
+  <div>
+    <ul>
+      <li class="aquas a1">auqas1</li>
+      <li class="aquas a2">auqas2</li>
+      <li class="aquas a3">auqas3</li>
+      <li class="aquas a4">auqas4</li>
+      <li class="aquas a5">auqas5</li>
+    </ul>
   </div>
 </body>
 </html>
