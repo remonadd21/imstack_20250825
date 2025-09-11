@@ -237,6 +237,8 @@
 3. new 배열 +for
 4. new 배열 실습
 5. 배열 upgrade 문제
+6. w3cschools bootstrap MaxCDN 가져오기
+
 ```
 
 
