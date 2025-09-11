@@ -24,7 +24,7 @@ public class Repeat003_While_doWhile {
 		
 		System.out.println("3. do while");
 		
-		int i = 1; // 3-1, 초기값은 위로
+		i = 1; // 3-1, 초기값은 위로
 
 		do{ // 2-2 일단 실행
 			System.out.print(i + "\t");
