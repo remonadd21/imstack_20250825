@@ -23,8 +23,8 @@ public class MilkProductManager_test {
         Scanner scanner = new Scanner(System.in);
 
         while (num != 9) {
-            System.out.println(Arrays.toString(productName));
-            System.out.println(Arrays.toString(price));
+            //System.out.println(Arrays.toString(productName));
+            //System.out.println(Arrays.toString(price));
    
             System.out.print("\n\n🥛 WELCOME TO MILK PRODUCT SYSTEM 🥛\n" +
                     "\n[1] ➕ 우유 제품 추가" +
@@ -97,17 +97,37 @@ public class MilkProductManager_test {
                      
                 }
             }
-            else if(num == 5) { System.out.println("재고 현황입니다."); 
+            else if(num == 5) { 
+            
+            	System.out.println("===================================\n"
+            			+ "📆 매 월 재고 현황입니다 📆\n"
+            			+ "===================================\n"
+            			+ "밀크\t초코\t딸기\t바나나\t재고\n"
+            			+ "==================================="); 
                 
-            		
-            		
+            		//3. 가로세로 방향
+
+				 for(int ch=0; ch<res.length-1; ch++) {
+	            		for(int kan=0; kan<res[ch].length-1; kan++) {
+	            			//가로방향
+	            			res[ch][4] += sav[ch][kan];
+	            			
+	            			//세로방향
+	            			res[3][kan] += sav[ch][kan];
+	            			
+	            			// 가장 끝 모서리
+	            			res[3][4] +=sav[ch][kan];
+	            		}
+	        		 }
+            		            				 
+            						 
+            						 
             		//2. sav 데이터 res에 덮기 
             		// 입력되는 데이터 길이 값 보여주기
 		        for(int ch=0; ch<sav.length; ch++) {
 		                for(int kan=0; kan<sav[ch].length; kan++) {
 		                		res[ch][kan] = sav[ch][kan];
 		                }
-		                System.out.println();
 		         }
 		        
 		        // 가로 방향 처리
@@ -123,10 +143,6 @@ public class MilkProductManager_test {
 		                System.out.println();
 		         }
             		
-            		
-            		
-    
-               
             
             } else if (num == 9) {
                 System.out.println("❌프로그램을 종료합니다.");
