@@ -2,7 +2,7 @@ package com.company.java005_ex;
 
 import java.util.Scanner;
 
-public class Bank_ing2 {
+public class Bank_ing3_array {
 	public static void main(String[] args) {
 		
 			
@@ -10,8 +10,8 @@ public class Bank_ing2 {
 		int num=0, age=0, count=0;
 		double money=0;
 		char end9 ='\u0000';
-		String ids="", pws="",chk="", res="";
-		
+		//String ids="", pws="",chk="", res="";
+		String [] str = {"ids", "pws", "chk", "res"};
 		
 		//입력
 		Scanner scanner = new Scanner(System.in);
@@ -29,10 +29,10 @@ public class Bank_ing2 {
 				System.out.print("아이디 입력: ");
 				// .toString() 안 붙여도 됨
 				// ids = scanner.next().toString();
-				ids = scanner.next();
+				str[0] = scanner.next();
 				
 				System.out.print("비밀번호 입력: ");
-				pws = scanner.next();
+				str[1] = scanner.next();
 				
 				do {
 				System.out.print("나이입력 (19~100세): ");
@@ -56,7 +56,7 @@ public class Bank_ing2 {
 			
 				
 				
-				if(ids2.equals(ids) && pws2.equals(pws)) {num2=num;}
+				if(ids2.equals(str[0]) && pws2.equals(str[1])) {num2=num;}
 				else {
 					count++;
 					System.out.println("고객님 "+count+"번 틀리셨습니다.");
@@ -73,7 +73,7 @@ public class Bank_ing2 {
 					case 2: 
 						
 						double percen = 0;
-						res="";
+						str[3]="";
 						
 						if(money>=100000 && money<=999999) {	
 							System.out.println("현재 금액은 "+money+"원으로 이자 2%가 추가됩니다."); 
@@ -93,8 +93,8 @@ public class Bank_ing2 {
 						else {
 							percen=0;
 						}
-						res+="아이디:"+ids+"/나이:"+age+"/이자: "+percen+"/총 금액: "+(money+percen)+"\n"; 
-						System.out.println(res); break;
+						str[3]+="아이디:"+str[0]+"/나이:"+age+"/이자: "+percen+"/총 금액: "+(money+percen)+"\n"; 
+						System.out.println(str[3]); break;
 					
 					case 3: System.out.print("입금할 금액을 입력하세요: ");
 							money+= scanner.nextInt();
@@ -105,21 +105,21 @@ public class Bank_ing2 {
 					case 4:System.out.print("출금할 금액을 입력하세요: ");
 						// 마이너스 금액 남지 않도록 만듬
 						double tempmoney = scanner.nextInt();			
-						res+=((tempmoney > money)?"잔액이 "+money+"원으로 출금이 불가능 합니다.":"출금 완료, 잔액: "+(money=money-tempmoney)+"원");
-						System.out.println(res);
+						str[3]+=((tempmoney > money)?"잔액이 "+money+"원으로 출금이 불가능 합니다.":"출금 완료, 잔액: "+(money=money-tempmoney)+"원");
+						System.out.println(str[3]);
 						break;
 					
 					case 5:
 						for(;;) {	
 							System.out.print("계좌를 삭제 하시겠습니까? ");
-							chk = scanner.next();
-							if(chk.equals("n") || chk.equals("N") ) {
+							str[2] = scanner.next();
+							if(str[2].equals("n") || str[2].equals("N") ) {
 								System.out.println("메뉴로 돌아갑니다.");
 								break;
 						}
-						else if(chk.equals("y") || chk.equals("Y") ) {
+						else if(str[2].equals("y") || str[2].equals("Y") ) {
 							System.out.println("계좌를 삭제합니다.");
-							ids=""; pws=""; ids2=""; pws2=""; money=0;
+							str[0]=""; str[1]=""; ids2=""; pws2=""; money=0;
 							System.out.println("계좌가 삭제되었습니다.");
 							break;
 						}

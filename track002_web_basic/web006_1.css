@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/*문자열 깨지지 않도록 설정해주기*/
+
+/*Q1. mycontainer 가로사이즈 50%, 페이지 정중앙 배치*/
+.mycontainer{width:50%; margin:2em auto; background-color:aliceblue;
+padding:20px; border-radius:20px;}
+/*Q2. mycontainer 왼쪽선, 패딩, 배경색상 적용*/
+h3{border-left:10px solid #123456; background-color: beige; padding:1em;}
