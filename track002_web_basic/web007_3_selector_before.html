@@ -20,9 +20,14 @@
         alert(2);
         alert(1);
     };
-    document.getElementById("addEventEx").onclick=function(){
+    let target = document.getElementById("addEventEx");
+    
+    target.onclick=function(){
         let num = prompt("좋아하는 숫자 입력받기: ");
         alert("제가 좋아하는 숫자는 "+num+" 입니다.");
+        target.style.backgroundColor="#000";
+        target.style.color="#fff";
+
     };
   });
 </script>
