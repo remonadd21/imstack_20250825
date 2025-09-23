@@ -327,10 +327,14 @@
 8. Modifier (public > protected > default(package) > private )
 9. import로 다른 폴더에 class 분해하기
 10. 상속받아서 접근하고 있는 modifier 구분하기
-11. 응용문제
+11. JAVA modifier 응용문제
 
 ```
-
+# Javascript 응용문제 풀기
+1. 스크립트가 document 어느 위치에서든 동작 가능하게 
+2. 아이디가 addEventEx인것을 getElementById이용해 선택
+3. 클릭시 prompt이용해서 당신이 좋아하는 1~5 사이의 숫자 물어보고
+3. alert 이용하여 알림창 띄우기
 
 
 ## 💖포트폴리오
