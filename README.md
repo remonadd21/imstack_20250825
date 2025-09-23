@@ -315,7 +315,19 @@
 
 ## 👩‍🎓 Study Day22
 ```
+1.복습문제
+2.클래스메서드, 클래스변수, 인스턴스 변수, 인스턴스메서드
+3.this, stack
+4.java 응용문제
+5.클래스메서드, 클래스변수, 인스턴스 변수, 인스턴스메서드
+  method, heap, stack area 에러나는 이유와 구분하는 응용문제.
 
+6. Final 과 static
+7. 자녀요소에서 Final이 붙었을 때 상속받지 못 함
+8. Modifier (public > protected > default(package) > private )
+9. import로 다른 폴더에 class 분해하기
+10. 상속받아서 접근하고 있는 modifier 구분하기
+11. 응용문제
 
 ```
 
