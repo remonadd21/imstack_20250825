@@ -354,6 +354,19 @@
 
 ```
 
+# 👩‍🎓 Study Day25
+```
+1. java 복습문제
+2. java 클래스 배열
+3. java 상속
+4. java의 UML관계
+5. javascript 제어문, 반복문
+  > forEach와 향상된 for문 첨부
+  exList.forEach((ele,index,list)=>{ alert(exList); });
+  for(let i in exList){ alert(i); }
+
+```
+
 ## 💖포트폴리오
 <!--
     1. java
