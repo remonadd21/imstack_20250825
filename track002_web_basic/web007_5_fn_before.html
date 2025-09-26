@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>DBDBIG</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<!--                                    -->
+<!--                                    -->
+<!--                                    -->
+<!--                                    -->
+<!--                                    -->
+<div class="p-3 bg-primary text-white ">
+  <h1>006. function </h1>
+  <ol>
+    <li>function- 명시적</li>
+    <li>a태그에서의 이벤트</li>
+  </ol>
+</div>
+<div class="container card  my-3">
+  <h3  class="card-header">006. FUNCTION - STEP1. function</h3>
+  <div class="card-body">
+    <h4>STEP1. function </h4>
+    <pre>
+    1.  function 선언   - function 함수이름(){}
+    2.  function 사용   - 함수이름();
+    </pre>
+		<input type="button"  value="FUNCTION1"  title="FUNCTION"  id="fn1"   class="btn btn-outline-primary" />
+    <script>
+      //이벤트대상                    이벤트   이벤트핸들러
+      //브라우저  로딩  이벤트핸들러
+      
+      // 1 이름이 없는 익명적 함수
+      window.addEventListener("load", function(){
+        document.querySelector("#fn1").addEventListener("click",function(){
+          // alert("Hello~ Goo :D!");
+          fn1();
+        });
+      });
+      // 2 이름이 있는 명시적 함수
+      // 호이스팅 : 코드실행전에 메모리에 올라가서 브라우저가 실행될때 가장 먼저 실행됨
+      
+      function fn1(){ alert("f~~1!"); }
+      // 자동으로 활성화 됨! fn1();
+
+      // 3 함수 표현식 (react 사용시)
+      // fn11();  변수 방식으로 사용시 먼저 사용하게 되면 선언하지 않아서 에러발생
+      const fn11 = function(){ alert("hello2"); }
+      // fn11();
+
+
+      // 4 화살표 함수 (react 사용시)
+      const fn12 = () => alert("Goo :D");
+      // fn12();
+
+
+      // 5 즉시 실행 함수 - 정의하자마자 실행되는 함소, 주로 초기화 용도
+      //(function(){ alert("Hello :)"); })();
+  </script>
+  </div>
+  <!--     -->
+  <!--     -->
+  <hr/>
+  <div class="card-body">
+    <h4>EX</h4>
+    <pre>
+      1. fn2를 누르면 - window.onload / getElementById 이용
+      2. fn2()  만들기 - 1,2,3,4,5 alert 창 5번 띄우기
+      3. #fn2에서 클릭할때 fn2() 호출
+      </pre>
+      <input type="button"  value="버튼2"  title="버튼2"    id="fn2"  class="btn btn-success" />
+      <script> 
+        // 명시적 함수로 문제 풀기
+        // function fn2(){ 
+        //   this.addEventListener("click",function(){
+        //     for(let i=1; i<=5; i++){ 
+        //       alert(i);
+        //     }
+        //   });
+        // }
+
+        // fn2();
+
+        // window.addEventListener("load",function(){
+        //  let fn2btn document.getElementById("fn2");
+        //   fn2btn.addEventListener("click",function(){
+        //     fn2();
+        //   });
+        // });
+        // function fn2(){
+        //   alert(1);alert(2);alert(3);alert(4);alert(5);
+        // }
+      </script>
+  </div>
+</div>
+
+
+
+
+<div class="container card  my-3">
+  <h3  class="card-header">006. FUNCTION - STEP2. a 태그에서 event</h3>
+  <div class="card-body">
+    <h4>STEP2. a 태그에서 event </h4>
+		<a href="https://www.naver.com/"   class="btn btn-outline-primary target_a" >EVENT</a>
+    <script>
+      //이벤트대상                    이벤트   이벤트핸들러
+      //브라우저  로딩  이벤트핸들러 
+      window.addEventListener("load",function(){
+        let tar_a = document.querySelector(".target_a");
+        tar_a.addEventListener("click",function(e){
+          e.preventDefault; // 이벤트 기본 동작 막기
+          alert("A Link Tag");
+        });
+      });
+    </script>
+  </div>
+  <!--     -->
+  <!--     -->
+  <hr/>
+  <div class="card-body">
+    <h4>STEP3. a 태그에서 event 사용예</h4>
+    <div class=" w-25  bg-primary    rounded  p-2 text-white  text-center ">
+      <h1>Score   <span class="target_num">0</span></h1>
+    </div>
+    <div class="w-25 text-center m-2">
+      <a href="#" class="btnPlus   btn btn-outline-primary">plus</a>
+      <a href="#" class="btnMinus  btn btn-outline-primary">minus</a>
+    </div>
+    <script>
+      // 플러스 버튼 누르면 사이트 넘어가지 말고, 상단으로 올라가지 말고
+      // target_num 의 숫자 증가
+      // 마이너스 버튼 누르면 상단이나 사이트 넘어가지 말고 숫자 감소
+        window.addEventListener("load",function(){
+          let plus = document.querySelector(".btnPlus");
+          let minus = document.querySelector(".btnMinus");
+          let count=0;
+          plus.addEventListener("click",function(e){
+            e.preventDefault();
+            let tnum = document.querySelector(".target_num");
+            tnum.innerHTML=++count;
+
+            this.href="#none";
+          });
+          minus.addEventListener("click",function(e){
+            e.preventDefault();
+            let tnum = document.querySelector(".target_num");
+            tnum.innerHTML=--count;
+
+          });
+        });
+
+    </script>
+  </div>
+  <!--     -->
+  <!--     -->
+  <hr/>
+  <div class="card-body">
+    <h4>EX</h4>
+    <div class="w-25  bg-success  rounded  p-2  mx-auto text-white  text-center target_box">
+      <h1 class="h1">ROTATE</h1>
+    </div>
+    <div class="w-25 text-center m-2">
+      <a href="#" class="btnLeft   btn btn-outline-success">LEFT ROTATE</a>
+      <a href="#" class="btnRight  btn btn-outline-success">RIGHT ROTATE</a>
+    </div>
+    <script>
+      window.addEventListener("load",function(){
+          let btnLeft = document.querySelector(".btnLeft");
+          let btnRight = document.querySelector(".btnRight");
+          let count=0;
+          btnLeft.addEventListener("click",function(e){
+            e.preventDefault();
+            let tb = document.querySelector(".target_box");
+            tb.style.transform="rotate("+(--count)+"deg)";
+
+            this.href="#none";
+          });
+          btnRight.addEventListener("click",function(e){
+            e.preventDefault();
+            let tb = document.querySelector(".target_box");
+            tb.style.transform="rotate("+(++count)+"deg)";
+
+          });
+        });
+
+    </script>
+  </div>
+</div>
+
+
+
+</body>
+</html>

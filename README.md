@@ -329,13 +329,30 @@
 10. 상속받아서 접근하고 있는 modifier 구분하기
 11. JAVA modifier 응용문제
 
-```
 # Javascript 응용문제 풀기
 1. 스크립트가 document 어느 위치에서든 동작 가능하게 
 2. 아이디가 addEventEx인것을 getElementById이용해 선택
 3. 클릭시 prompt이용해서 당신이 좋아하는 1~5 사이의 숫자 물어보고
 3. alert 이용하여 알림창 띄우기
+```
 
+# 👩‍🎓 Study Day23
+```
+1. static, final , modifier 이론문제
+2. java 실습문제, (클래스 변수, 클래스메서드, 인스턴스 변수, 인스턴트 메서드 나누기)
+3. java 실습문제 업그레이드
+
+```
+# 👩‍🎓 Study Day24
+```
+1. java 이론 복습문제
+2. https://staruml.io/ 접속
+3. 설치 및 실행
+4. Bank UML 설계
+5. javascript 이벤트 실습
+6. javascript 함수 종류 이해 및 실습
+
+```
 
 ## 💖포트폴리오
 <!--
