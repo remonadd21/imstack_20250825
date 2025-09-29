@@ -366,6 +366,17 @@
   for(let i in exList){ alert(i); }
 
 ```
+# 👩‍🎓 Study Day26
+```
+1. java 복습문제
+2. java 상속도 및 그리기
+3. 값과 메서드에 대한 이해
+> 앞에는 자료형, 뒤에는 메서드
+> Test ts = new Child
+> test는 값과 자료형, Child는 메서드나 리턴값
+
+```
+
 
 ## 💖포트폴리오
 <!--
