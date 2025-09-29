@@ -375,6 +375,8 @@
 > Test ts = new Child
 > test는 값과 자료형, Child는 메서드나 리턴값
 
+
+
 ```
 
 
