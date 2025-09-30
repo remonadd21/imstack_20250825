@@ -9,6 +9,9 @@ class Child7 extends Parent7 {
 	int x = 200;
 	public Child7() { super(); }
 	@Override  void method() { System.out.println("Child Method"); }
+	
+	//추가
+	void papaMethod() {super.method();}
 }
 
 
@@ -24,14 +27,14 @@ public class PolyEx005 {
 	   * (x=100,-------)
 	   * p = Child7(-----, method("Child Method"))
 	   * 
-	   * ==>   x=100, method("Child Method")
+	   * ==>   x=100, @method("Child Method")
 	   * 
 	   * */
 	  
 	  
 	  
 	  // Q4. 인스턴스화 했을때 사용가능한 범위 : new Child7()
-	  /*		x=200, method("Child Method");
+	  /*		x=200, @method("Child Method");
 	   * 
 	   * */
 	  
@@ -46,7 +49,14 @@ public class PolyEx005 {
 	  // x=200
 	  c.method();   // Q8. 출력되는 내용
 	  //Child Method
+	  // Q9. main에서 부모메서드 호출하기? - Parent Method
+	  ((Parent7)p).method();	
+	  // X 오버라이딩 된 메서드를 직접 호출하는건 불가능, 오버라이딩된 자식것만 호출됨
 	  
+	  // 추가
+	  c.papaMethod();
+	  // 추가 p에서 호출하기
+	  	((Child7)p).papaMethod();
 	}
 
 }
