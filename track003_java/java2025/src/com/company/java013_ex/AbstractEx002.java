@@ -3,51 +3,51 @@ package com.company.java013_ex;
 import java.util.Arrays;
 
 abstract class Astronaut {
-	protected String name;
-	protected int stamina;
+   protected String name;
+   protected int stamina;
 
-	public void setName(String name) { this.name = name; }
-	public String getName() { return name; }
-	public void setStamina(int stamina) { this.stamina = stamina; }
-	public int getStamina() { return stamina; }
+   public void setName(String name) { this.name = name; }
+   public String getName() { return name; }
+   public void setStamina(int stamina) { this.stamina = stamina; }
+   public int getStamina() { return stamina; }
 
-	abstract void explore();
-	abstract void report();
-	abstract void rest();
+   abstract void explore();
+   abstract void report();
+   abstract void rest();
 }
 
 class Engineer extends Astronaut {
-	@Override void explore() { System.out.println(super.name 
-			+ "엔지니어 탐사: 기계 장치 점검 완료! 체력 "+super.getStamina()); }
-	@Override void report() { System.out.println(super.name 
-			+ " 보고서: 에너지 시스템 안정적 체력 "+super.getStamina()); }
-	@Override void rest() { System.out.println(super.name 
-			+ " 휴식: 공구 정리하며 재충전 중... 현재 체력: "); }
+   @Override void explore() { System.out.println(super.name 
+         + "엔지니어 탐사: 기계 장치 점검 완료! 체력 "+super.getStamina()); }
+   @Override void report() { System.out.println(super.name 
+         + " 보고서: 에너지 시스템 안정적 체력 "+super.getStamina()); }
+   @Override void rest() { System.out.println(super.name 
+         + " 휴식: 공구 정리하며 재충전 중... 현재 체력: "+(100 - super.getStamina())); }
 }
 
 class Biologist extends Astronaut {
-	@Override void explore() { System.out.println(super.name 
-			+ " 생물학자 탐사: 외계 식물 샘플 채취! 체력 "+super.getStamina()); }
-	@Override void report() { System.out.println(super.name + " 보고서: 생명체 흔적 발견"); }
-	@Override void rest() { System.out.println(super.name 
-			+ " 휴식: 생체 리듬 조절 중...현재 체력: "); }
-	}
+   @Override void explore() { System.out.println(super.name 
+         + " 생물학자 탐사: 외계 식물 샘플 채취! 체력 "+super.getStamina()); }
+   @Override void report() { System.out.println(super.name + " 보고서: 생명체 흔적 발견"); }
+   @Override void rest() { System.out.println(super.name 
+         + " 휴식: 생체 리듬 조절 중...현재 체력: "+(100 - super.getStamina())); }
+   }
 
 class Pilot extends Astronaut {
-	@Override void explore() { System.out.println(super.name 
-			+ " 파일럿 탐사: 항로 재설정 및 우주선 조종! 체력 "+super.getStamina()); }
-	@Override void report() { System.out.println(super.name + " 보고서: 궤도 진입 성공");}
-	@Override void rest() { System.out.println(super.name 
-			+ " 휴식: 조종석에서 짧은 명상...현재 체력: "); }
+   @Override void explore() { System.out.println(super.name 
+         + " 파일럿 탐사: 항로 재설정 및 우주선 조종! 체력 "+super.getStamina()); }
+   @Override void report() { System.out.println(super.name + " 보고서: 궤도 진입 성공");}
+   @Override void rest() { System.out.println(super.name 
+         + " 휴식: 조종석에서 짧은 명상...현재 체력: "+(100 - super.getStamina())); }
 }
 
 
 public class AbstractEx002 {
-	public static void main(String[] args) {
-	
+   public static void main(String[] args) {
+   
       // Astronaut astro = new Astronaut();  // Q1. 왜 객체 생성이 불가능한가?
-	  // 이건 먼 과거에서 부터 시작된 이야기야....
-	  // 구현 {} 하는 파트가 없어서 그렇다는데.. 비밀이야..
+     // 이건 먼 과거에서 부터 시작된 이야기야....
+     // 구현 {} 하는 파트가 없어서 그렇다는데.. 비밀이야..
 
       System.out.println("\n--- 우주 탐사 대원 시뮬레이션 ---");
       Astronaut[] crew = { new Engineer(), new Biologist(), new Pilot() };
@@ -55,25 +55,31 @@ public class AbstractEx002 {
       int[] stamina = { 75, 60, 85 };
       
       for(int i=0; i < crew.length; i++) {
-    	  	crew[i].name = names[i]; 
-    	  	
-    	  	// 스테미나 랜덤 휴식
-    	  	stamina[i]=(int)(Math.random() * 20 + 5);
-    	  	
-    	  	
-    	  	// 체력소모
-    	  	crew[i].setStamina(stamina[i]*-1);
-    	  	// 체력소모 받앙
-    	  	int now = crew[i].getStamina();
-    	  	
-    	  	
-    	  	
-    	  	
-    	  	
+            crew[i].name = names[i]; 
+            
+            // 스테미나 랜덤 휴식
+            stamina[i]=(int)(Math.random() * 20 + 5);
+            
+            
+            // 체력소모
+            crew[i].setStamina(stamina[i]*-1);
+            // 체력소모 출력
+            crew[i].explore(); 
+            
+            
+            if(stamina[i]<70) {
+               
+               // 체력회복
+               crew[i].setStamina(stamina[i]+=10); 
+               
+               crew[i].rest();
+            }
+            
+            
       }
       
       
-	}
+   }
 }
 //연습문제2)
 //패키지명 : com.company.java013_ex 

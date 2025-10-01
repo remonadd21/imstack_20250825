@@ -383,9 +383,20 @@
 3. abstract 추상클래스
 4. interface
 5. abstract 응용문제
+6. jQuery 선택자.
+
+7. git merge 직후
+git log --online
+git reset --hard 586059e
+git push origin master --force
 
 ```
+# 👩‍🎓 Study Day28
+```
+1. abstract 복습문제
+2. interface 설명과 실습문제
 
+```
 
 ## 💖포트폴리오
 <!--
