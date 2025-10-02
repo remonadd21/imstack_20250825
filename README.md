@@ -395,6 +395,14 @@ git push origin master --force
 ```
 1. abstract 복습문제
 2. interface 설명과 실습문제
+3. ArrayList<>() 설명과 실습문제
+```
+
+```
+# 👩‍🎓 Study Day29
+```
+1. Java 이론, 실습문제
+2. Bank Interface 문제
 
 ```
 

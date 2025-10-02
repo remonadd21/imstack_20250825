@@ -18,7 +18,7 @@ public class Add {
       System.out.println("[2]비밀번호  입력 > ");  this.userinfo.setPass(scanner.next() );
       System.out.println("[3]잔액     입력 > ");  this.userinfo.setBalance(scanner.nextDouble());
       
-      //this.userinfo = new UserInfo(id, pass, balance);
+      UserInfo user= new UserInfo(id, pass, balance);
       System.out.println("사용자 추가완료 : " +  this.userinfo);
    }
 }
