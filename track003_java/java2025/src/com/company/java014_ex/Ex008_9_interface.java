@@ -2,11 +2,10 @@ package com.company.java014_ex;
 
 //1) abstract와 interface의 공통점과 차이점은?
 /*
-	공통점 : abstract는 추상 클래스로 구현부가 없다. 
-			interface도 구현부가 없다. 구현 가능한 메서드가 필요하다.
-
-	다른점 : abstract 클래스는 abstract라는 추상 객체를 반드시 만들어야 한다. extends로 클래스 상속이 가능하다.
-			interface는 메인 클래스 상속과 구현부 implements로 다중 상속이 가능하다.
+	공통점 : 둘다 성계가 가능한 클래스, 자식객체를 통해서 코드를 구현한다.
+	차이점 : 추상화정도가 interface가 더 크다.
+	abstract - 인스턴스 변수, 인스턴스 메서드 사용가능
+	interface - 상수 (public static final), abstract 메서드
 
 */
 //2) 아래 구현 되도록 코드 작성하기
@@ -26,7 +25,7 @@ class Car1b implements Vehicle1b{
 }
 
 class Driver1b{
-	void drive(MotorCycle1b m) {
+	public void drive(MotorCycle1b m) { // 의존관계
 		m.helmet();
 		m.run();
 	}

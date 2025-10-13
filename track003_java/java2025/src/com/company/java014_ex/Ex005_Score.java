@@ -1,7 +1,7 @@
 package com.company.java014_ex;
 
-
-
+// import가 필요할 때
+// import com.company.java014_ex.Score;
 
 
 public class Ex005_Score{

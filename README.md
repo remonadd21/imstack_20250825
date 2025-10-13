@@ -407,10 +407,33 @@ git push origin master --force
 
 # 👩‍🎓 Study Day30
 ```
+JAVA 복습문제 1~10
+
+```
+# 👩‍🎓 Study Day31
+```
+
+# Java Collection FrameWork
+- List
+- Set
+- Map
+
+> file
+
+# java 아이스크림 List 응용문제
+# 오라클 다운받기
+https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
+
+> cmd 창에서 system과 scott(테스트 계정) 로그인 확인하기 
+
+
+# sqldeveloper 다운받기
+https://www.oracle.com/kr/database/sqldeveloper/technologies/download/
+
+> system과 scott 로그인 해두기
 
 
 ```
-
 
 
 ## 💖포트폴리오
