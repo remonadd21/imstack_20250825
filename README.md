@@ -411,8 +411,6 @@ JAVA 복습문제 1~10
 
 ```
 # 👩‍🎓 Study Day31
-```
-
 # Java Collection FrameWork
 - List
 - Set
@@ -431,7 +429,6 @@ https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
 https://www.oracle.com/kr/database/sqldeveloper/technologies/download/
 
 > system과 scott 로그인 해두기
-
 
 ```
 
