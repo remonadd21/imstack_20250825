@@ -430,7 +430,12 @@ https://www.oracle.com/kr/database/sqldeveloper/technologies/download/
 
 > system과 scott 로그인 해두기
 
+
+# 👩‍🎓 Study Day32
 ```
+
+```
+
 
 
 ## 💖포트폴리오
