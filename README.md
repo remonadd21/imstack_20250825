@@ -433,9 +433,16 @@ https://www.oracle.com/kr/database/sqldeveloper/technologies/download/
 
 # 👩‍🎓 Study Day32
 ```
+1. 오라클 설명, 실습
+2. java set, map 설명
 
 ```
-
+# 👩‍🎓 Study Day33
+```
+1. 오라클 union, union all, trim, length, lengthb...
+2. sql 활용문제
+3. java , map, set 활용문제
+```
 
 
 ## 💖포트폴리오
