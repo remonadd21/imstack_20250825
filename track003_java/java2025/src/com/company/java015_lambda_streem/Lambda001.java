@@ -28,7 +28,7 @@ public class Lambda001 {
 			@Override
 			public void method() {
 				System.out.println("일회용- Hello :D");				
-			}
+			};
 		};	i21.method();
 		
 		Inter1 i22 = new Inter1() {

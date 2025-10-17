@@ -447,10 +447,19 @@ https://www.oracle.com/kr/database/sqldeveloper/technologies/download/
 # 👩‍🎓 Study Day34
 ```
 1. java 람다식 설명, 실습
+2. 오라클, 문자열, 숫자, 날짜, 변환, 조건 설명
+3. 오라클 실습문제
 
-``
+```
 
+# 👩‍🎓 Study Day35
+```
+1. 오라클 기본문제, 사고확장 문제
+2. to_date, months_between, add_months, last_day, next_day, sysdate
+3. java stream
+4. 네트워크 관리사
 
+```
 
 
 

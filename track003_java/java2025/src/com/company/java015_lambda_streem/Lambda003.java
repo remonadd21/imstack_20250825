@@ -83,12 +83,8 @@ public class Lambda003 {
 		System.out.println(abs.apply(-10));
 		
 		// interface InterPrint{ void print(String s);}
-		InterPrint ipr = s-> System.out.println(s);
+		InterPrint ipr = s -> { return s;};
 		ipr.print("GOOOOOD!");
-		
-		
-		InterPrint ipr2 = System.out::println;
-		ipr2.print("GOOOOOD!");
 		
 		// ex1) 람다식 구현하기
 		// System.out.println("hi".length());
