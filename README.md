@@ -461,6 +461,15 @@ https://www.oracle.com/kr/database/sqldeveloper/technologies/download/
 
 ```
 
+# 👩‍🎓 Study Day36
+```
+
+1. JAVA :byte, char, img, Buffered, StringBurffered
+2. JAVA :API
+3. git revert 
+  commit된 hash번호로 되돌리기 기능
+
+```
 
 
 ## 💖포트폴리오
