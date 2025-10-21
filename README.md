@@ -471,6 +471,22 @@ https://www.oracle.com/kr/database/sqldeveloper/technologies/download/
 
 ```
 
+# 👩‍🎓 Study Day37
+```
+1. JAVA : Thread
+2. Thread 응용문제
+3. 오라클 sum, max, min, avg
+4. select sum, max, min, avg from emp 
+where 
+group by 
+having 
+order by
+
+```
+
+
+
+
 
 ## 💖포트폴리오
 <!--
