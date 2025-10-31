@@ -483,10 +483,67 @@ having
 order by
 
 ```
+# 👩‍🎓 Study Day38
+
+1. 자바채팅
+2. 오라클
+  > group by, grouping, pivot, unpivot, rollup, cube
 
 
+```
 
+```
 
+# 👩‍🎓 Study Day39
+```
+1. 오라클
+> join on, left outer join, right outer join, full outer join.. 등등 실습문제 
+> SQL 99 이전, 이후, 사고확장 문제
+
+2. jsp 설치
+
+```
+
+# 👩‍🎓 Study Day40
+```
+1. 오라클 WITH, ANY, SOME, ALL
+2. 오라클 실습문제
+3. jsp , was
+```
+
+# 👩‍🎓 Study Day41
+```
+1. 포트폴리오 기획과 의도 설명
+2. 오라클 crud, ddl 등에 대한 설명과 실습
+3. form태그 사용, jdbc 드커프리?
+```
+
+# 👩‍🎓 Study Day42
+```
+1) 조인부터 로그인까지 실습
+2) 중복위험이 없도록 시퀀스 배우기
+```
+
+# 👩‍🎓 Study Day43
+```
+jsp 게시판 만들기 1차
+
+```
+# 👩‍🎓 Study Day44
+```
+jsp 게시판 만들기 2차
+
+```
+# 👩‍🎓 Study Day45
+```
+1. jsp 게시판 만들기 3차 (완성)
+
+<%=request.getContextPath()%>
+${pageContext.request.contexPath}
+
+2. 외래키
+
+```
 
 ## 💖포트폴리오
 <!--

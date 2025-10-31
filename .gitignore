@@ -1,18 +1,24 @@
-# Eclipse 관련폴더 및 파일 무시
+# IDE 설정
+*.iml
+.idea/
 .classpath
 .project
 .settings/
-eclipse/
 
-# 필드 결과물 무시
-/bin/
-/build/
+# 빌드 결과물
+build/
+target/
+out/
+*.class
 
-# IDE관련
-.idea/
-*.iml
-# OS변 임시파일
-*.DS_Store
-Thumbs.db
-# 로그파일
+# 로그 및 임시 파일
 *.log
+*.tmp
+*.bak
+
+# OS 자동 생성 파일
+.DS_Store
+Thumbs.db
+
+# 민감 정보
+*.properties
