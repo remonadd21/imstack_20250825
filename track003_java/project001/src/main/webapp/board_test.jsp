@@ -41,12 +41,12 @@
 			3. select id
 		</pre>
 		
-<%-- <%--   		<% 
+<%--   		<% 
 			PostDao dao = new PostDao();
   			PostDto dto = new PostDto();
 			out.println(dao.update_hit(2));
 			out.println(dao.select(dto.getId(2));
-		%> 
+		%> --%>
 		 
 		<pre>
 			3. update
