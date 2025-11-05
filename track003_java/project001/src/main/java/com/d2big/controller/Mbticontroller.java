@@ -81,7 +81,8 @@ public class Mbticontroller extends HttpServlet {
 			String result = (String) request.getAttribute("result");
 			
 			if(result.equals("1")) {
-			out.println("<script>alert('글이 수정되었습니다.'); location.href='detail.do?id="+request.getParameter("id")+"';</script>"); 
+			out.println("<script>alert('글이 수정되었습니다.'); "
+					+ "location.href='detail.do?id="+request.getParameter("id")+"';</script>"); 
 			}else {
 			out.println("<script>alert('비밀번호를 확인해 주세요.'); history.go(-1);</script>"); 
 			}
