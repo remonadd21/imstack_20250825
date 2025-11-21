@@ -3,11 +3,17 @@
 <!-- header -->
 <div class="container mt-5">
 	<h3>WELCOME! 회원가입</h3>
-	<form action="join_proc.jsp" method="post">
+	<div id="spoon"><img src="<%=request.getContextPath()%>/member/bigspoon.jpg" alt="bigspoon"/></div>
+	<form action="<%=request.getContextPath()%>/join.do" method="post">
 		<div class="mb-3">
-			<label for="username" class="form-label">이름:</label> 
-			<input type=""userName"" class="form-control" id="username"
-				placeholder="Enter name"  name="username">
+			<label for="userId" class="form-label">아이디:</label> 
+			<input type="userName" class="form-control" id="userId"
+				placeholder="Enter id"  name="userId">
+		</div>
+		<div class="mb-3">
+			<label for="userName" class="form-label">이름:</label> 
+			<input type="userName" class="form-control" id="userName"
+				placeholder="Enter name"  name="userName">
 		</div>
 		<div class="mb-3 mt-3">
 			<label for="email" class="form-label">이메일:</label> 
@@ -26,10 +32,11 @@
 		</div>
 			<div class="mb-3">
 			<span>성별: </span>
-			<label for="mele">남자</label> 
-			<input type="radio" id="mele"name="chk">
-			<label for="femele">여자</label> 
-			<input type="radio" id="femele"name="chk">
+			<select id="gender" name="gender">
+				<option>성별 선택</option>
+				<option value="남자">남자</option>
+				<option value="여자">여자</option>
+			</select>
 		</div>
 		<div class="mb-3">
 			<label for="joindate" class="form-label">가입일:</label> 

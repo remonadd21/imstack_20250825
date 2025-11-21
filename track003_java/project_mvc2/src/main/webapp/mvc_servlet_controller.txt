@@ -1,0 +1,237 @@
+﻿ -----------------------------------------------------
+--------------------------------------------------- [MODEL]
+[MODEL] DB  :  o1/1111    / TABLE :  mvcboard2_1
+1. dbManager : DB연동기능   [000]
+2. DB연동테스트
+
+[MVC] MODEL   
+DB  :  o1/1111    / TABLE :  mvcboard2_1     [본인이름_board1] 
+SQL> desc mvcboard2_1
+ 이름                                      널?      유형
+ ----------------------------------------- -------- -------------------
+ BNO                                       NOT NULL NUMBER        	PRI  (m21_pk)     | 시퀀스  |  ####
+ BNAME                                   NOT NULL VARCHAR2(50)
+ BPASS                                    NOT NULL VARCHAR2(50)
+ BTITLE                                    NOT NULL VARCHAR2(250)
+ BCONTENT                              NOT NULL VARCHAR2(4000)
+ BDATE                                                  TIMESTAMP(6)
+ BHIT                                                     NUMBER
+ BIP                                       NOT NULL VARCHAR2(50)
+ BCATEGORY                                          VARCHAR2(20)
+
+시퀀스 이름 :     seq_mvcboard2_1   => create sequence   seq_mvcboard2_1   start with 0 minvalue 0;
+-----------------------------------------------------
+------------------------------------------- 
+3. dto				[본인이름_board12]     : 	com.company.dto.M21DTO
+4. dbcp			[본인이름_board123]  : 	com.company.dbmanager.DBManager	  - 연동확인해주세요
+5. dao		    [본인이름_board1234]   :	com.company.dao.M21DAO		- 코드는 나중에   	
+
+
+create table mvcboard3(  
+	bno int not null  auto_increment primary key ,
+	bname varchar(50) not null,
+	bpass varchar(50) not null,
+	btitle varchar(250) not null,
+	bcontent text not null,
+	bdate timestamp default current_timestamp not null,
+	bhit int default 0 not null,
+	bip varchar(50) not null
+) default charset=utf8;
+
+
+create table mvcmember2(  
+	mno int not null  auto_increment primary key ,
+	mid varchar(50) not null,
+	mname varchar(50) not null,
+	mpass varchar(50) not null,
+	memail varchar(250) not null,
+	mdate timestamp default current_timestamp not null,
+	mip varchar(50) not null
+) default charset=utf8;
+
+
+
+- 필요한 sql 찾아주세요!
+	예) ㅁ list.jsp
+		- 최신글순으로 리스트출력    
+			■ public   ArrayList<M21DTO>  listAll()
+			SELECT * FROM    mvcboard2_1  order by bno desc;
+			method명   :  listAll 
+			return        :  ArrayList<M21DTO>
+			parameter   :  -
+			
+			
+		- 전체갯수 출력  
+			■ public  int   listTotal()
+			SELECT count(*)  as  total  FROM    mvcboard2_1 
+			return        :  int
+			parameter   :  -
+		
+		-write.jsp - 글삽입기능 
+			■ public    int   write(  M21DTO dto  )
+			INSERT INTO   mvcboard2_1 ( bno , bname , bpass ,btitle , bcontent , bip ,bcategory ) 
+			values (  mvcboard2_1.nextval , ? , ? , ? , ? , ?  ,?);
+			return        :   int 
+			parameter   :   bname , bpass ,btitle , bcontent  , bcategory
+						
+		-detail.jsp - 해당보기상세보기기능    [###]
+		-edit.jsp   - 해당보기상세보기기능 	[###] 
+			■ public  M21DTO  detail(   M21DTO dto )
+			sql: select * from   mvcboard2_1  where bno=?
+			return :    M21DTO
+			parameter :   bno
+			
+		ㅁdetail.jsp - 조회수 
+		    ■ public int  addHit(   M21DTO dto ) 
+		 	sql: update mvcboard2_1 set bhit=bhit+1  where bno=?
+  			return : int
+  			parameter :  bno
+ 
+		ㅁedit.jsp   - 유저확인시 db에서 비밀번호확인  [###] 
+		ㅁdelete.jsp- 유저확인시 db에서 비밀번호확인  [###] 	
+		    ■ public int  checkPass( M21DTO dto)
+		 	sql: select count(*) as check_pass  from  mvcboard2_1   where bno=?  and  bpass=?
+  			return :  int
+  			parameter :	bno , bpass(유저가 입력한 bpass)
+  			
+		ㅁedit.jsp - 업데이트기능 
+		    ■ public int  edit(  M21DTO dto )
+		 	sql: update mvcboard2_1 set  btitle=? , bcontent=? where bno=?
+  			return : int
+  			parameter :	btitle, bcontent, bno
+  				
+		ㅁdelete.jsp - 삭제기능
+		    ■ public int  delete( M21DTO dto)
+			 sql: delete from mvcboard123   where bno=?
+  			return : int
+  			parameter :	bno
+			
+
+--1. [cmd]
+CREATE TABLE  mvcboard2_1
+(  bno  number  not null   constraints  m21_pk  primary key , 
+   bname varchar2(50) not null,
+   bpass varchar2(50) not null,
+   btitle varchar2(250) not null,
+   bcontent varchar2(4000) not null,
+   bdate  timestamp default current_timestamp,
+   bhit    number   default 0, 
+   bip     varchar2(50) not null,
+   bcategory varchar2(20)
+ );
+
+--2.  [cmd]
+create sequence   seq_mvcboard2_1   start with 0 minvalue 0;
+ 
+
+
+
+-----------------------------------------------------
+--------------------------------------------------- [VIEW]
+-------------------------------------------  [ : ]  [본인이름_board12345]
+[View]  - error설정
+1. [inc]  404error.jsp  / 500error.jsp 에러페이지설정
+-------------------------------------------  [ : ]  [본인이름_board123456]
+[View] - board folder분리
+1. [inc]      header/footer넣어주기 - 공용파일
+2. [board]  공용파일의 게시판 view넣기
+	<%@ include  file="../inc/header.jsp" %>
+	공용파일 board 폼사용하기 
+-----------------------------------------------------
+--------------------------------------------------- [CONTROLLER]
+-------------------------------------------  [ : ]   [본인이름1234567]
+[View]  
+index page    
+<script>location.href="${pageContext.request.contextPath}/list.do";</script>
+[frontcontroller]
+1. 모든경로는 : do로 받는다 *.do
+2. 경로설정 :
+	ㅁ 글쓰기폼 /write_view.do    
+		경로 :  /board/write.jsp
+	ㅁ 글쓰기기능 /write.do		
+		경로 : /list.do 
+	ㅁ 리스트보기 /list.do
+	     경로 : /board/list.jsp 
+	ㅁ 상세보기 /detail.do
+		경로 : /board/detail.jsp 
+	ㅁ 수정폼 /edit_view.do
+		경로 :  /board/edit.jsp 
+	ㅁ 수정기능 /edit.do
+		경로 : /list.do 
+	ㅁ 삭제폼 /delete_view.do
+		경로 : /board/delete.jsp 
+	ㅁ 삭제기능 /delete.do
+		경로 : /list.do 
+
+
+
+
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------ [~15:00]# [본인이름12345] 
+[View]												[Controller]
+index.jsp
+ 
+													 write_view.do
+													1. 경로처리
+
+													write.do [  com.company.controller  ]
+													//////////////////// BWriteAction
+													//        0. 데이터 받아오기
+													//        1. dao부르기 - db : insert  ★ 알림창
+													viewPage = "/list.do";
+
+------------------------------------------------------------------------------------------------  [~15:30]# [본인이름12346]   
+													[002]/list.do
+													////////////////////  
+															//			1.  dao 부르기
+															//			2-1. [DAO이용해서]  전체리스트출력해서 ArrayList로 리턴 
+															//			2-2. [DAO이용해서]  전체갯수 출력 리턴 		   
+															viewPage = "/board/list.jsp";
+------------------------------------------------------------------------------------------------  [~16:00]# [본인이름1234567]   
+[003] BDetail.action?bno=	 (서블릿) 
+		[상세]	     doGet 
+		3-0. 해당번호 넘겨받기
+		3-1.  dao 부르기
+		3-2. 해당번호의 데이터가져오기 - request.setParameter()
+		3-3. [DAO이용해서]  db에서 해당데이터가져오기 / [DAO이용해서]  번호업데이트
+		3-4. detail.jsp 경로 넘기기
+		3-5. 수정폼    -   BEdit.action?bno=   		doGet
+			삭제폼    -   BDelete.action?bno=   		doGet 
+------------------------------------------------------------------------------------------------  [~16:30]
+[004]  BEdit.action 
+	[수정폼]  doGet
+	BEdit.action?bno=	 (서블릿)
+	0. 데이터 받아오기
+	1.   dao 부르기
+	2. [DAO이용해서]  를 이용해서 데이터 가져오기 
+	3. board/edit.jsp   경로 넘기기
+	request.getRequestDispatcher().forword이용해서 경로 넘기기
+ 	
+														[수정기능]  doPost
+														0. dao 부르기
+														1. db manager 연동
+														2. [DAO이용해서]  를 이용해서 데이터 업데이트
+														3. 해당번호의 BDetail.action로 경로 
+------------------------------------------------------------------------------------------------
+[005]  BDelete.action
+	[삭제폼]  doGet
+	BDelete.action?bno=	 (서블릿) 
+	0. 데이터 받아오기  (삭제할 번호 받아오기)
+	1.  경로처리  board/delete.jsp 		
+	
+														[수정기능]  BDelete.action   - doPost
+														0. 데이터 받아오기  (삭제할 번호 받아오기)
+														1.   dao 부르기
+														2. [DAO이용해서]   이용해서 데이터 삭제
+														3. 해당번호의 BList로 경로 	
+	action="<%=request.getContextPath()%>/BDelete.action?bno=<%=request.getAttribute("bno")%>"
+------------------------------------------------------------------------------------------------
+ 
+
+
+
+
+
+
+ 

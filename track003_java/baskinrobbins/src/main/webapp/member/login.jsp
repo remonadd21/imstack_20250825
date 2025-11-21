@@ -9,7 +9,8 @@
 
 <div class="container mt-5">
 	<h3>LOGIN</h3>
-	<form action="login_proc.jsp" method="post">
+	<div id="spoon"><img src="<%=request.getContextPath()%>/member/bigspoon.jpg" alt="bigspoon"/></div>
+	<form action="<%=request.getContextPath()%>/login.do" method="post">
 		<div class="mb-3 mt-3">
 			<label for="email" class="form-label">email:</label> 
 			<input type="email" class="form-control" id="email"

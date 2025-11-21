@@ -7,11 +7,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.bera.service.BeraDelete;
 import com.bera.service.BeraDetail;
 import com.bera.service.BeraInsert;
+import com.bera.service.BeraJoin;
 import com.bera.service.BeraList;
+import com.bera.service.BeraLogin;
+import com.bera.service.BeraMypage;
 import com.bera.service.BeraService;
 import com.bera.service.BeraUpdate;
 import com.bera.service.BeraUpdateView;
@@ -44,7 +48,47 @@ public class BeraControllers extends HttpServlet {
 		
 		BeraService service = null;
 		
-		if(path.equals("/list.do")) {
+		if(path.equals("/joinView.do")) {
+			request.getRequestDispatcher("member/join.jsp").forward(request, response);
+		}
+		else if(path.equals("/join.do")) {
+			service = new BeraJoin();
+			service.exec(request, response);
+			
+			String result = (String) request.getAttribute("result");
+			if(result.equals("1")) {
+				out.println("<script>alert('회원가입에 성공했습니다.'); location.href='loginView.do';</script>");
+			}else {
+				out.println("<script>alert('관리자에게 문의 주세요.'); history.go(-1);</script>");
+			}
+		}
+		else if(path.equals("/loginView.do")) {
+			request.getRequestDispatcher("member/login.jsp").forward(request, response);
+		}
+		else if(path.equals("/login.do")) {
+			service = new BeraLogin();
+			service.exec(request, response);
+		
+			String result = (String) request.getAttribute("result");
+			
+			if(result.equals("1")) {
+				out.println("<script>alert('로그인에 성공했습니다.'); location.href='mypage.do'; </script>");
+			}else {
+				out.println("<script>alert('관리자에게 연락주세요.'); history.go(-1);</script>");
+			} 
+		}
+		else if(path.equals("/mypage.do")) {
+			service = new BeraMypage();
+			service.exec(request, response);
+			request.getRequestDispatcher("member/mypage.jsp").forward(request, response);
+		
+		}else if(path.equals("/logout.do")) {
+			HttpSession session=  request.getSession();
+			session.invalidate(); // 서버에 저장되어 있는 기록 싹다 지우세요
+			out.println("<script>alert('로그아웃! 다음에 다시 만나요!'); location.href='list.do'</script>");
+			
+		}
+		else if(path.equals("/list.do")) {
 			service = new BeraList();
 			service.exec(request, response);
 			request.getRequestDispatcher("beraBoard/list.jsp").forward(request, response);

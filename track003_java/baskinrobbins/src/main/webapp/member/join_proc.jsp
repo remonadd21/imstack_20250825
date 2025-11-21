@@ -1,6 +1,7 @@
-<%@page import="java.sql.*"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="java.sql.*"%>
+
 <%
 	Connection conn = null;  PreparedStatement pstmt = null;   ResultSet  rset = null;
 	String driver   = "oracle.jdbc.driver.OracleDriver";
@@ -8,7 +9,8 @@
 	String user     = "scott"; 
 	String pass     = "tiger";
 	
-	String username = request.getParameter("username");
+	String userId = request.getParameter("userId");
+	String userName = request.getParameter("userName");
 	String email = request.getParameter("email");
 	String passw = request.getParameter("passw");
 	String birth = request.getParameter("birth");
@@ -21,16 +23,17 @@
 		Class.forName(driver);
 		conn = DriverManager.getConnection(url, user, pass);
 		String sql =
-		" insert into bruser (idNum, username, email, passw, birth, gender,joindate, chk) values (idNum_seq2.nextval, ?,?,?,?,?,?,?)";
+		" insert into bruser (idNum, userId, userName, email, passw, birth, gender,joindate, chk) values (idNum_seq2.nextval,?,?,?,?,?,?,?,?);";
 		
 		pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, username);
-		pstmt.setString(2, email);
-		pstmt.setString(3, passw);
-		pstmt.setString(4, birth);
-		pstmt.setString(5, gender);
-		pstmt.setString(6, joindate);
-		pstmt.setString(7, chk);
+		pstmt.setString(1, userId);
+		pstmt.setString(2, userName);
+		pstmt.setString(3, email);
+		pstmt.setString(4, passw);
+		pstmt.setString(5, birth);
+		pstmt.setString(6, gender);
+		pstmt.setString(7, joindate);
+		pstmt.setString(8, chk);
 		
 		int result = pstmt.executeUpdate();
 		if(result>0){out.print("<script>alert('회원 가입에 성공!'); location.href='login.jsp';</script>");}
@@ -56,4 +59,4 @@ JOIN_DATE                DATE
 MARKETING_AGREE          CHAR(1)       
 PASS            NOT NULL VARCHAR2(50)  
 
- -->
+ --> --%>

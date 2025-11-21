@@ -17,7 +17,8 @@
   <script>
 	  $(document).ready(function() {
 	    $("form").mouseover(function() {
-	      $(this).css({"width":"440px","borderRadius":"30px 30px 10px 10px","boxShadow":"0 0 10px rgba(0,0,0,0.2)" });
+	      $(this).css({"width":"440px","borderRadius":"50px 10px 10px 10px","boxShadow":"0 0 10px rgba(0,0,0,0.2)" });
+	      $("#spoon").css({"left":"390px","top":"135px","transform":"rotate(-150deg)"});
 	    });
 	  });
 
@@ -30,14 +31,18 @@
     background: #aaa;
   }
   .container h3{text-align:center; perspective:600px;}
-  	.navbar{height:80px; background:url("../inc/h_logo_white.png")no-repeat 10px;;
+  	.navbar{height:80px; background:url("../inc/h_logo_white.png")no-repeat 10px;
 		padding:20px; background-color:#F986BD; 
 		box-shadow:0 0 10px rgba(0,0,0,0.5); position:relative; }
 	.navbar-expand-sm .navbar-nav{right:20px; position:absolute;}
 	.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{color:#fff;}
 	
+	#spoon{width:200px; position:absolute; left:270px; top:80px; transform:rotate(-140deg);
+	z-index:-1; transition:all 2s ease;}
+	#spoon img{width:100%;}
+	
 	form{width:400px; margin:20px auto 0; 
-	border:1px solid #F986BD; padding:30px; transition:all 1s;}
+	border:1px solid #F986BD; padding:30px; transition:all 1s ease 0.8s;}
 	
 	#usericename{width:90%; line-height:40px; height:40px; border:1px solid #F986BD;}
 	
@@ -65,26 +70,25 @@
       <!-- 로그인을 한 경우 -->
       <% 
       String email = (String)session.getAttribute("email"); 
-      Integer idNum = (Integer)session.getAttribute("idNum");	
       if(email !=null){%>
       
       <li class="nav-item">
         <a class="nav-link active" 
-        href="<%=request.getContextPath()%>/member/mypage.jsp?idNum<%=idNum%>"><%=email%></a>
+        href="<%=request.getContextPath()%>/mypage.do"><%=email%></a>
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="<%=request.getContextPath()%>/list.do">BeraBoard</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="<%=request.getContextPath()%>/member/logout.jsp">LogOut</a>
+        <a class="nav-link active" href="<%=request.getContextPath()%>/logout.do">LogOut</a>
       </li>
      <% }else{ %>
      <!-- 로그인 안한 경우 -->
       <li class="nav-item">
-        <a class="nav-link active" href="<%=request.getContextPath()%>/member/login.jsp">LOGIN</a>
+        <a class="nav-link active" href="<%=request.getContextPath()%>/loginView.do">LOGIN</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="<%=request.getContextPath()%>/member/join.jsp">JOIN</a>
+        <a class="nav-link active" href="<%=request.getContextPath()%>/joinView.do">JOIN</a>
       </li>
      <% } %>
     </ul>
